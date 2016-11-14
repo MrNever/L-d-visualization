@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>报警分析-TreeMap</title>
+    <link href="../css/htmlmodel.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/alarmtreemap.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/alarmtreemapother/jquery.range.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="box">
+    <div id="top">
+
+    </div>
+    <div id="contentleft">
+        <label id="label_1"  x-index="9990">中石化青岛炼化</label>
+        <div id="contentleft_mo1" style="width: 380px;height: 600px;"></div>
+        <label id="label_2"  x-index="9990">中石化连云港炼化</label>
+        <div id="contentleft_mo2" style="  margin-left: 5px;width:385px;height: 298px; top: -6px;"></div>
+        <label id="label_3"  x-index="9990">中石化海南炼化</label>
+        <div id="contentleft_mo3" style="margin-left: 5px; margin-top:15px;width:385px;height: 280px;"></div>
+    </div>
+    <div id="contentright">
+        <!--<div id="drop" >-->
+             <!--<p style="  margin-bottom: 3px;">公司选择：</p>-->
+            <!--<select id="option1" style="width: 150px;">-->
+                <!--<option>中石化青岛炼化</option>-->
+                <!--<option>中石化连云港炼化</option>-->
+                <!--<option>中石化海南炼化</option>-->
+            <!--</select>-->
+        <!--</div>-->
+        <!--<div id="sizecolor">-->
+            <!--<p style="  margin-bottom: 3px;">原料类型选择:</p>-->
+            <!--<select id="option2" style="width: 150px;">-->
+                <!--<option>基本有机化工原料</option>-->
+                <!--<option>合纤原料</option>-->
+                <!--<option>合成树脂</option>-->
+                <!--<option>合成橡胶</option>-->
+                <!--<option>合成纤维</option>-->
+            <!--</select>-->
+            <!--<div id="colorbg" style="margin-top:25px;width: 95%;height:20px;"></div>-->
+            <!--&lt;!&ndash;<div><input type='text' id="FilterColor" /></div>&ndash;&gt;-->
+        <!--</div>-->
+        <div id="checkbox">
+            <div id="radindex2" style="margin-left:3px;margin-top: 10px;">
+            <div><input type="checkbox" id="rad1" class="checkitem" value="ABO"  name="radi" checked></div><p>基本有机化工原料</p>
+            <div><input type="checkbox" id="rad2" class="checkitem"   value="AGB"  name="radi"></div><p>合纤原料</p>
+            <div><input type="checkbox" id="rad3"  class="checkitem"  value="ESL"  name="radi" ></div><p>合成树脂</p>
+            <div><input type="checkbox" id="rad4" class="checkitem" value="ABO"  name="radi" ></div><p>合成橡胶</p>
+            <div><input type="checkbox" id="rad5" class="checkitem"   value="AGB"  name="radi"></div><p>合成纤维</p>
+            <!--<div><input type="checkbox" id="rad6"  class="checkitem"  value="ESL"  name="radi" ></div><p>ESL</p>-->
+           </div>
+        </div>
+        <div id="inputitem">
+            <div id="input1" style="margin-top: 25px" >
+                <p style="margin-bottom: 20px">日现金流范围：</p>
+                <input type="hidden" id="single-slider1" class="single-slider" value="23"/>
+            </div>
+            <div id="input2" style="margin-top: 25px;">
+                <p style="margin-bottom: 20px" >月现金流范围：</p>
+                <input type="hidden" id="single-slider2" class="single-slider" value="15"/>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript" src="../lib/d3.csv.js"></script>
+<script type="text/javascript" src="../js/alarmtreemapother/jquery.range.js"></script>
+
+
+<script type="text/javascript" src="../js/alarmtreemap2.js"></script>
+
+
+<script type="text/javascript" src="../js/alarmtreemapother/spectrum.js"></script>
+<link href="../css/alarmtreemapother/spectrum.css" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript" src="../lib/hammer.js"></script>
+<link href="../css/rediobutton.css" rel="stylesheet" type="text/css"/>
+<script src="../js/radiobuttonjs/index.js"></script>
+</html>

@@ -1,0 +1,493 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <!--<meta property="og:image" content="http://www.brightpointinc.com/interactive/images/Deficit_202px.png">-->
+    <title>正负分布比例图</title>
+    <style type="text/css">
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+    body {
+        font-size: 12px;
+        text-align:center;
+        font-weight: 200;
+        font-family: "Helvetica Neue", Helvetica;
+        overflow-y: hidden;
+    }
+    /* start pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/
+    body.disable-default-action
+    {
+        -webkit-touch-callout:none ;
+        -webkit-user-select:none ;
+    }
+
+    *:not(input,textarea) {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+    }
+    /* end pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/
+    #bpg {
+        margin:10px auto;
+        min-width:1000px;
+        border: solid 1px #dcdcdc;
+        -webkit-box-flex: 1;
+    }
+    .titlesty{
+        width: 100%;
+        line-height: 30px;
+        font-size: 24px;
+        font-family: "微软雅黑", "宋体", "Arial", "黑体";
+        text-align: left;
+        text-indent: 11em;
+        margin-top: 10px;
+    }
+    #mainDiv {
+        position:relative;
+        display: -webkit-box;
+    }
+    #svgDiv {
+    }
+    .leftpanel{
+        -webkit-box-flex: 1;
+        max-width: 200px;
+        position: relative;
+    }
+    .leftpanel>#imgDiv{
+        position: absolute;
+        top: 50px;
+        right: 10px;
+    }
+    .rightpanel{
+        width: 150px;
+        padding-top: 150px;
+    }
+    .taglist{
+    }
+    .taglist>.tagitem{
+        line-height: 30px;
+        border-bottom:dotted 1px #dcdcdc;
+        font-family: "微软雅黑", "宋体", "Arial", "黑体";
+        font-size: 12px;
+        color: #666666;
+        text-align: left;
+        text-indent: 3em;
+    }
+
+    #headerRight {
+        font-family: "Helvetica Neue", Helvetica;
+        text-align: right;
+        position:absolute;
+        top:10px;
+        font-size:23px;
+        right:0px;
+        margin-right:20px;
+    }
+
+    rect {
+        fill: none;
+        pointer-events: all;
+    }
+
+    pre {
+        font-size: 18px;
+    }
+
+    .hint {
+        right: 0;
+        width: 300px;
+        font-size: 12px;
+        color: #999;
+    }
+
+
+    div.tooltip {
+        position: absolute;			/* reference for measurement */
+        text-align: left;
+        pointer-events: none;			/* 'none' tells the mouse to ignore the rectangle */
+        background: #FFFFEF;
+        width: 400px;
+        height: 165px;
+        padding: 10px;
+        border: 1px solid #D5D5D5;
+        font-family: arial,helvetica,sans-serif;
+        position: absolute;
+        font-size: 1.1em;
+        color: #333;
+        padding: 10px;
+        border-radius: 3px;
+        background: rgba(255,255,255,0.9);
+        color: #000;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+        border:1px solid rgba(200,200,200,0.85);
+        opacity:0;
+    }
+
+    div.tooltipTail {
+        position: absolute;
+        left:-7px;
+        top: 72px;
+        width: 7px;
+        height: 13px;
+        background: url("../images/tail_white.png") 50% 0%;
+    }
+
+    div.toolTipBody {
+        position:absolute;
+        height:100px;
+        width:230px;
+    }
+
+    div.header {
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 14px;
+        margin-bottom: 2px;
+        color:#666;
+        text-align:center;
+
+    }
+
+    div.header-rule{
+        height:1px;
+        margin:1px auto 3px;
+        margin-top:7px;
+        margin-bottom:7px;
+        background:#ddd;
+        width:125px;
+    }
+
+    div.header1{
+        /* text-transform: uppercase; */
+        text-align: left;
+        font-size: 13px;
+        margin-bottom: 2px;
+        color:#000;
+        text-align:center;
+    }
+
+    div.header2{
+        color:#000;
+        text-transform:uppercase;
+        font-size: 12px;
+        margin-bottom: 2px;
+        text-align:center;
+    }
+
+    div.header3 {
+        color:#333;
+        text-align: left;
+        font-size: 15px;
+        font-style: italic;
+        font-family: Georgia;
+        /*  width:170px;*/
+        text-align:center;
+    }
+
+    div.header4 {
+        /*  position:absolute;*/
+        text-align:center;
+        right:10px;
+        top:28px;
+        font-size: 16px;
+        /*  width:100px;*/
+        text-align:center;
+        overflow:hidden;
+        font-weight:bold;
+    }
+
+    /* Structure */
+    .g {
+        font-family:  "Helvetic Neue", Helvetica, Arial;
+    }
+
+    #bpg-chartFrame{
+        -webkit-transition: height ease-in-out 1s;
+        -moz-transition: height ease-in-out 1s;
+        -o-transition: height ease-in-out 1s;
+        -ms-transition: height ease-in-out 1s;
+    }
+
+    #bpg-chart {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    #bpg-error {
+
+
+    }
+    #bpg-error p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 10px;
+        border: solid 1px #CCC;
+        background: #ffd;
+        padding: 10px;
+
+    }
+
+    #bpg-error a {
+        text-decoration: underline;
+    }
+
+    #bpg-chartCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+    }
+    #bpg-chartCanvas svg {
+        height: 100%;
+        overflow: hidden;
+
+    }
+
+    /* Navigation */
+    .bpg-navBar {
+        position:absolute;
+        padding: 15px 0 0;
+        margin: 0 10px;
+        z-index: 100;
+        position: absolute;
+        left:10px;
+        top:10px;
+    }
+
+    .bpg-navigation {
+
+    }
+
+    .bpg-navigation li {
+        color: #999;
+        font-size: 14px;
+        cursor: pointer;
+        float: left;
+        padding: 10px 18px;
+        border-top: solid 1px #CCC;
+        border-bottom: solid 1px #CCC;
+        border-left: solid 1px #CCC;
+        background: #f9f9f9;
+        margin: 0 0;
+    }
+
+    .bpg-navigation li:first-of-type{
+        border-radius: 4px 0 0 4px;
+    }
+    .bpg-navigation li:last-of-type{
+
+        border-right: solid 1px #CCC;
+        border-radius: 0 4px 4px 0;
+    }
+    .bpg-navigation li.selected {
+        color: #000;
+        background: #e9e9e9;
+        border-color: #AAA;
+        box-shadow: inset 0px 0px 4px rgba(0,0,0,0.2);
+    }
+
+    .bpg-navigation li.selected {
+        color: #000;
+        background: #e9e9e9;
+        border-color: #AAA;
+        box-shadow: inset 0px 0px 4px rgba(0,0,0,0.2);
+    }
+
+    div.selected {
+        color: #000;
+        background: #e9e9e9;
+        border-color: #AAA;
+        box-shadow: inset 0px 0px 4px rgba(0,0,0,0.2);
+        padding-bottom:10px;
+    }
+
+    .link {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: 1.5px;
+        stroke-linecap: round;
+    }
+
+    text.chord {
+        font-size:8px;
+    }
+
+
+    text.mainLabel {
+        font-size:0px;
+        /*font-family: Georgia;*/
+        font-style: italic;
+        text-align:center;
+        fill: #9B001C;
+    }
+
+
+    text.export {
+        font-family: "Myriad", Arial;
+        fill: #00AC6B;
+    }
+
+    text.import {
+        font-family: "Myriad", Arial;
+        fill: #9B001C;
+    }
+
+    text.secondLabel {
+        font-family: Myriad, Arial;
+        font-style: italic;
+        fill: #888888;
+        font-size: 10px;
+    }
+    /*页面美化---------------start*/
+    .headtitle{
+        height: 30px;
+        line-height: 30px;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ededed));
+        display: -webkit-box;
+    }
+    .headtitle_img{
+        width: 15px;
+        height: 17px;
+        background-image: url('../images/ico_2.gif');
+        margin-top: 6px;
+        margin-left: 10px;
+    }
+    .headtitle_txt{
+        font-weight: bold;padding-right: 10px;border-bottom: solid 3px #3398de;margin-left: 10px;
+    }
+    </style>
+
+    <script async="" src="../lib/analytics.js"></script>
+    <script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+    <script type="text/javascript" src="../lib/d3/trigonometry.js"></script>
+    <script type="text/javascript" src="../lib/d3/arc.js"></script>
+    <script type="text/javascript" src="../lib/d3/functor.js"></script>
+    <script type="text/javascript" src="../lib/d3/source.js"></script>
+    <script type="text/javascript" src="../lib/d3/target.js"></script>
+
+    <script type="text/javascript" src="../lib/d3/arc-chord.js"></script>
+    <script type="text/javascript" src="../lib/d3/d3-svg-arc-chord.js"></script>
+
+    <script type="text/javascript" src="../lib/d3/gradients.js"></script>
+    <script type="text/javascript" src="../lib/d3/urchin.js"></script>
+
+    <!-- Google Analytics -->
+    <meta name="verify-v1" content="">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','','ga');
+
+        ga('create', 'UA-173014-2', 'brightpointinc.com');
+        ga('send', 'pageview');
+
+    </script>
+
+    <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+    .en-markup-crop-options {
+        top: 18px !important;
+        left: 50% !important;
+        margin-left: -100px !important;
+        width: 200px !important;
+        border: 2px rgba(255,255,255,.38) solid !important;
+        border-radius: 4px !important;
+    }
+
+    .en-markup-crop-options div div:first-of-type {
+        margin-left: 0px !important;
+    }
+    </style>
+</head>
+<body class="disable-default-action">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div id="bpg">
+    <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">裂解炉产能VS能耗对比分析</div></div>
+    <div id="mainDiv">
+        <div class="leftpanel">
+            <div id="imgDiv" >
+                <img id="playPause" src="../images/pause_bw.png" width="24" height="24">
+            </div>
+        </div>
+        <div id="svgDiv"></div>
+        <div id="rightPanelDiv" class="rightpanel"></div>
+    </div>
+    <div id="toolTip" class="tooltip" style="opacity: 0; width: 200px; height: 90px; position: absolute; left: 706px; top: 503px;">
+        <div id="header1" class="header3">Jan 2012</div>
+        <div class="header-rule"></div>
+        <div id="head" class="header">4. Japan</div>
+        <div class="header-rule"></div>
+        <div id="header2" class="header2">Imports: -$11,756,147,820</div>
+        <div class="tooltipTail"></div>
+    </div>
+</div>
+
+<div class="fb-like" onmouseout="fb_mouseOut();" style="z-index: 9998; position:absolute; left:40px; top:51px;" data-href="#" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+
+<div id="fbMask" onmouseover="fb_mouseOver();" style="z-index: 9999; position: absolute; left: 40px; top: 51px; width: 100px; height: 20px; opacity: 0.7; display: none; background: white;"></div>
+<script type="text/javascript">
+
+
+    var fbMask = d3.select(document.getElementById("fbMask"));
+
+    function fb_mouseOver() {
+        //  console.log("hidden");
+        fbMask.style("display","none");
+    }
+
+    function fb_mouseOut() {
+        fbMask.style("display","block");
+    }
+
+</script>
+<script type="text/javascript" src="../lib/app/globals.js"></script>
+<script type="text/javascript" src="../lib/app/initialize.js"></script>
+<script type="text/javascript" src="../lib/app/events.js"></script>
+<script type="text/javascript" src="../data/json_data/ustrad_2000_2013.js"></script>
+<script type="text/javascript" src="../lib/app/data.js"></script>
+<script type="text/javascript" src="../lib/app/_buildChords.js"></script>
+<script type="text/javascript" src="../lib/app/update.js"></script>
+</body>
+</html>
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+    window.onload=function(){
+        initialize();
+        fetchData();
+    }
+    function run() {
+        if (month < 15) month++; else {
+            month=0;
+            if (year < countriesGrouped.length-1) year++;
+        }
+        if (month==maxMonth && year==maxYear)  {
+            month=0;
+            year=0;
+        }
+        else {
+            year=month
+            update(year,month);
+        }
+    }
+</script>

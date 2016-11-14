@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>乙烯装置能耗分析-TreeMap</title>
+    <link href="../css/htmlmodel.css" rel="stylesheet" type="text/css"/>
+    <link href="../lib/datepicker/zebra_datepicker_metallic.css" type="text/css" rel="stylesheet"/>
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+        /* start pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/
+        body.disable-default-action
+        {
+            -webkit-touch-callout:none ;
+            -webkit-user-select:none ;
+        }
+
+        *:not(input,textarea) {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }
+        /* end pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/
+        .maindiv{margin:0px auto;padding: 0px;height: 100%;min-width: 1000px;-webkit-box-flex: 1;display: -webkit-box;-webkit-box-orient:vertical;}
+        .vinydevicemenu{height: 30px;display: -webkit-box;margin: 10px;margin-left: 0px}
+        .vinydevicemenu_titledate{font-size: 14px;line-height: 30px;}
+        .vinydevicemenu_date{margin-left: 10px;}
+        .DatePicker{height: 25px;color: #666666;width: 120px;}
+        .vinydevicetab{
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            display: -webkit-box;
+            margin-bottom: 5px;
+        }
+        .vinydevtabitem:nth-child(1){
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            border:solid 1px #dcdcdc;
+            border-right-width: 0px;
+        }
+        .vinydevtabitem:nth-child(2){
+            border:solid 1px #dcdcdc;
+            border-right-width: 0px;
+        }
+        .vinydevtabitem:nth-child(3){
+            border:solid 1px #dcdcdc;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .vinydevtabitem{
+            width: 30px;
+            height: 20px;
+            line-height: 20px;
+            color: #666666;
+            cursor: pointer;
+            text-align: center;
+        }
+        .selected{background-color: #666666;color: #FFFFFF;}
+        .content{-webkit-box-flex: 1;display: -webkit-box;}
+        .contentleft{
+            -webkit-box-flex: 1;display: -webkit-box;-webkit-box-orient: vertical;
+        }
+        .contentleft>div{
+            -webkit-box-flex: 1;display: -webkit-box;
+        }
+        .contentleft>div>div[class='subleft']{
+           width: 80px;text-align: center;
+        }
+        .contentleft>div>div[class='submap']{
+            position: relative;
+            -webkit-box-flex: 1;
+        }
+        .contentleft>div>div[class='spacerow']{ height: 10px;line-height: 10px;font-size: 0px;}
+
+        .contentright{width: 220px;display: -webkit-box;-webkit-box-orient: vertical;margin: 10px;border: solid 1px #dcdcdc;}
+        .contentright>div{padding-left: 10px;padding-right: 10px;}
+        .contentright>div[class='headtitle']{padding: 0px}
+
+        .contentright>div>select{width: 100%;border-radius: 5px;border:solid 1px #dcdcdc;font-family: "微软雅黑";font-size:12px;cursor:pointer;color: #666666;}
+        .rightbartitle{margin-top: 15px;}
+        .checkitems{max-height: 400px;overflow-y: auto;display: -webkit-box;-webkit-box-orient: vertical;}
+        .cheitems_item{display: -webkit-box;height: 25px;line-height: 25px;}
+        .item_ico{width: 10px;height: 10px;margin-top: 8px;margin-right: 8px;}
+
+        /* slider 范围选择控件开始*/
+        .en-markup-crop-options {
+            top: 18px !important;left: 50% !important;margin-left: -100px !important;
+            width: 150px !important;
+            border: 2px rgba(255,255,255,.38) solid !important;
+            border-radius: 4px !important;
+        }
+        .en-markup-crop-options div div:first-of-type {margin-left: 0px !important;}
+        .range-picker-axis{padding:0;position:relative;width:158px;height:2px;border:1px solid #CCC;display:inline-block;border-radius:2px;z-index:1;}
+        .range-picker{position:absolute;width:10px;height:10px;border:1px solid #BBB;z-index:3;top:-5px;border-radius:2px;cursor:pointer;background-color:#FFF;}
+        .range-picker.left{left:-4px;}
+        .range-picker.right{right:-4px;}
+        .range-picker.active{background-color:#CCC;}
+        .range-selected{background-color:#CCC;z-index: 2;position: absolute;width:100%;}
+        /*slider 范围选择控件结束*/
+
+        /*treemap 样式 start --------------------------------------*/
+        .node {
+            border: dotted 1px #dcdcdc;
+            font: 12px "微软雅黑";
+            line-height: 12px;
+            overflow: hidden;
+            position: absolute;
+            text-indent: 2px;
+            color: #ffffff;
+        }
+        /* Copyright 2014 Evernote Corporation. All rights reserved. */
+        .en-markup-crop-options {
+            top: 18px !important;
+            left: 50% !important;
+            margin-left: -100px !important;
+            width: 200px !important;
+            border: 2px rgba(255,255,255,.38) solid !important;
+            border-radius: 4px !important;
+        }
+
+        .en-markup-crop-options div div:first-of-type {
+            margin-left: 0px !important;
+        }
+        /*treemap 样式 end --------------------------------------*/
+
+        /*页面美化---------------start*/
+        .sliderlabelpanel{display: -webkit-box;margin-top: 8px;}
+        .sliderlabelpanel>div[class='label_left']{-webkit-box-flex: 1;text-align: left}
+        .sliderlabelpanel>div[class='label_right']{-webkit-box-flex: 1;text-align: right}
+        .headtitle{
+            height: 30px;
+            line-height: 30px;
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ededed));
+            display: -webkit-box;
+        }
+        .headtitle_img{
+            width: 15px;
+            height: 17px;
+            background-image: url('../images/ico_2.gif');
+            margin-top: 6px;
+            margin-left: 10px;
+        }
+        .headtitle_txt{
+            font-weight: bold;padding-right: 10px;border-bottom: solid 3px #3398de;margin-left: 10px;
+        }
+        .content_left{-webkit-box-flex: 1;display: -webkit-box;-webkit-box-orient: vertical;border: solid 1px #dcdcdc;margin: 10px;margin-right: 0px;}
+
+    </style>
+</head>
+<body class="disable-default-action">
+    <div class="maindiv">
+        <div class="content">
+            <div class="content_left">
+                <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">乙烯装置单元&介质能耗</div></div>
+                <div id="lefttreemap" class="contentleft"></div>
+            </div>
+            <div class="contentright">
+                <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">日期范围选择</div></div>
+                <div class="sliderlabelpanel"><div class="label_left">2005-01-01</div><div class="label_right">2014-12-31</div></div>
+                <div><span id="slideryear"  class="daisy-range-picker"></span></div>
+                <div class="rightbartitle">时间粒度切换：</div>
+                <div>
+                    <select id="timesizetype">
+                        <option value="M">分钟</option>
+                        <option value="H">小时</option>
+                        <option value="D">天</option>
+                    </select>
+                </div>
+                <div class="rightbartitle">选择维度(单元、介质)：</div>
+                <div>
+                    <select id="vydimensiontype">
+                        <option value="单元">单元</option>
+                        <option value="介质">介质</option>
+                    </select>
+                </div>
+                <div class="rightbartitle">显示项列表：</div>
+                <div>
+                    <div id="checkitems">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/range_picker.js"></script>
+<script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript" src="../lib/d3.csv.js"></script>
+
+<script type="text/javascript" src="../data/json_data/vinyldevicetreemap.js"></script>
+<script type="text/javascript" src="../js/vinyldevicetreemap.js"></script>

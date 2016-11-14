@@ -1,0 +1,245 @@
+.slickgrid_39885 .slick-header-column { left: 1000px; }
+.slickgrid_39885 .slick-top-panel { height:25px; }
+.slickgrid_39885 .slick-headerrow-columns { height:25px; }
+.slickgrid_39885 .slick-cell { height:22px; }
+.slickgrid_39885 .slick-row { width:1620px; height:25px; }
+.slickgrid_39885 .lr { float:none; position:absolute; }
+.slickgrid_39885 .l0 { left: 0px; }
+.slickgrid_39885 .r0 { right: 1300px; }
+.slickgrid_39885 .l1 { left: 320px; }
+.slickgrid_39885 .r1 { right: 1120px; }
+.slickgrid_39885 .l2 { left: 500px; }
+.slickgrid_39885 .r2 { right: 1040px; }
+.slickgrid_39885 .l3 { left: 580px; }
+.slickgrid_39885 .r3 { right: 960px; }
+.slickgrid_39885 .l4 { left: 660px; }
+.slickgrid_39885 .r4 { right: 880px; }
+.slickgrid_39885 .l5 { left: 740px; }
+.slickgrid_39885 .r5 { right: 800px; }
+.slickgrid_39885 .l6 { left: 820px; }
+.slickgrid_39885 .r6 { right: 720px; }
+.slickgrid_39885 .l7 { left: 900px; }
+.slickgrid_39885 .r7 { right: 640px; }
+.slickgrid_39885 .l8 { left: 980px; }
+.slickgrid_39885 .r8 { right: 560px; }
+.slickgrid_39885 .l9 { left: 1060px; }
+.slickgrid_39885 .r9 { right: 480px; }
+.slickgrid_39885 .l10 { left: 1140px; }
+.slickgrid_39885 .r10 { right: 400px; }
+.slickgrid_39885 .l11 { left: 1220px; }
+.slickgrid_39885 .r11 { right: 320px; }
+.slickgrid_39885 .l12 { left: 1300px; }
+.slickgrid_39885 .r12 { right: 240px; }
+.slickgrid_39885 .l13 { left: 1380px; }
+.slickgrid_39885 .r13 { right: 160px; }
+.slickgrid_39885 .l14 { left: 1460px; }
+.slickgrid_39885 .r14 { right: 80px; }
+.slickgrid_39885 .l15 { left: 1540px; }
+.slickgrid_39885 .r15 { right: 0px; }
+
+
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+
+
+
+.slickgrid_114842 .slick-header-column { left: 1000px; }
+.slickgrid_114842 .slick-top-panel { height:25px; }
+.slickgrid_114842 .slick-headerrow-columns { height:25px; }
+.slickgrid_114842 .slick-cell { height:22px; }
+.slickgrid_114842 .slick-row { width:1620px; height:25px; }
+.slickgrid_114842 .lr { float:none; position:absolute; }
+.slickgrid_114842 .l0 { left: 0px; }
+.slickgrid_114842 .r0 { right: 1300px; }
+.slickgrid_114842 .l1 { left: 320px; }
+.slickgrid_114842 .r1 { right: 1120px; }
+.slickgrid_114842 .l2 { left: 500px; }
+.slickgrid_114842 .r2 { right: 1040px; }
+.slickgrid_114842 .l3 { left: 580px; }
+.slickgrid_114842 .r3 { right: 960px; }
+.slickgrid_114842 .l4 { left: 660px; }
+.slickgrid_114842 .r4 { right: 880px; }
+.slickgrid_114842 .l5 { left: 740px; }
+.slickgrid_114842 .r5 { right: 800px; }
+.slickgrid_114842 .l6 { left: 820px; }
+.slickgrid_114842 .r6 { right: 720px; }
+.slickgrid_114842 .l7 { left: 900px; }
+.slickgrid_114842 .r7 { right: 640px; }
+.slickgrid_114842 .l8 { left: 980px; }
+.slickgrid_114842 .r8 { right: 560px; }
+.slickgrid_114842 .l9 { left: 1060px; }
+.slickgrid_114842 .r9 { right: 480px; }
+.slickgrid_114842 .l10 { left: 1140px; }
+.slickgrid_114842 .r10 { right: 400px; }
+.slickgrid_114842 .l11 { left: 1220px; }
+.slickgrid_114842 .r11 { right: 320px; }
+.slickgrid_114842 .l12 { left: 1300px; }
+.slickgrid_114842 .r12 { right: 240px; }
+.slickgrid_114842 .l13 { left: 1380px; }
+.slickgrid_114842 .r13 { right: 160px; }
+.slickgrid_114842 .l14 { left: 1460px; }
+.slickgrid_114842 .r14 { right: 80px; }
+.slickgrid_114842 .l15 { left: 1540px; }
+.slickgrid_114842 .r15 { right: 0px; }
+
+
+/*#contentright{*/
+    /*float: left;*/
+    /*height: 200px;*/
+    /*margin-left: 930px;*/
+    /*margin-top: -500px;*/
+/*}*/
+#radindex{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+#radindex2{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+#radindex2 input{
+    width: 20px;
+    height: 20px;
+}
+#radindex input{
+    width: 20px;
+    height: 20px;
+}
+#radindex p{
+    margin-left: 27px;
+    padding: 3px;
+}
+/*.DatePicker{*/
+    /*height: 25px;*/
+    /*line-height: 25px;*/
+    /*color: #666666;*/
+/*}*/
+/*#radindex2 label{*/
+    /*position: absolute;*/
+/*}*/
+/*#box{*/
+    /*min-width: 700px;*/
+    /*max-width: 0px;*/
+    /*margin: 0px auto;*/
+    /*padding: 0px;*/
+/*}*/
+
+
+.main_box{
+    /*width: 96%;*/
+    /*margin: 0px auto;*/
+    /*height: 100%;*/
+    /*display:-webkit-box;*/
+    height: 100%;
+    min-width: 1000px;
+    margin: 0px auto;
+    -webkit-box-flex:1;
+    display: -webkit-box;
+}
+.content_left{
+    -webkit-box-flex:1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+
+}
+
+.content_top{
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+}
+.content_right{
+    /*width: 230px;*/
+    height: 100%;
+    margin: 10px 0px;
+    -webkit-box-orient: vertical;
+}
+
+/*时间控件样式 start --------------------------------------*/
+.en-markup-crop-options {
+    top: 18px !important;left: 50% !important;margin-left: -100px !important;
+    width: 150px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+.en-markup-crop-options div div:first-of-type {margin-left: 0px !important;}
+.range-picker-axis{padding:0;position:relative;width:100px;height:2px;border:1px solid #CCC;display:inline-block;border-radius:2px;z-index:1;}
+.range-picker{position:absolute;width:10px;height:10px;border:1px solid #BBB;z-index:3;top:-5px;border-radius:2px;cursor:pointer;background-color:#FFF;}
+.range-picker.left{left:-4px;}
+.range-picker.right{right:-4px;}
+.range-picker.active{background-color:#CCC;}
+.range-selected{background-color:#CCC;z-index: 2;position: absolute;width:100%;}
+/*slider 范围选择控件结束*/
+
+.sliderlabelpanel{display: -webkit-box; }
+.sliderlabelpanel>div[class='label_left']{-webkit-box-flex: 1;text-align: left}
+.sliderlabelpanel>div[class='label_right']{-webkit-box-flex: 1;text-align: right}
+/*时间控件样式 end --------------------------------------*/
+
+.select_country{
+    margin-top: 10px;
+}
+#checkbox{
+    height: 380px;
+    overflow-y: auto;
+}
+#select_countryid input{
+    margin-left: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+/*页面美化 start --------------------------------------*/
+.headtitle{
+    height: 30px;
+    line-height: 30px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ededed));
+    display: -webkit-box;
+}
+.headtitle_img{
+    width: 15px;
+    height: 17px;
+    background-image: url('../images/ico_2.gif');
+    margin-top: 6px;
+    margin-left: 10px;
+}
+.headtitle_txt{
+    font-weight: bold;padding-right: 10px;border-bottom: solid 3px #3398de;margin-left: 10px;
+}
+.rightheadtitle{
+    height: 30px;
+    line-height: 30px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ededed));
+    display: -webkit-box;
+    margin-bottom: 5px;
+}
+/*页面美化 end --------------------------------------*/
+
+
+.padding{
+    padding: 10px;
+}
+
+/* start pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/
+body.disable-default-action
+{
+    -webkit-touch-callout:none ;
+    -webkit-user-select:none ;
+}
+
+*:not(input,textarea) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+/* end pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/

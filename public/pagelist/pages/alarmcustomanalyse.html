@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../css/htmlmodel.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/alarmcustomanalyse.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../css/oilcomponent/slick.grid.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="../css/oilcomponent/style1.css" type="text/css" charset="utf-8">
+</head>
+<body class="disable-default-action">
+<div class="main_box">
+    <div id="content_leftdiv" class="content_left">
+        <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">报警数量</div></div>
+        <div class="content_top" style="border:solid 1px #dcdcdc;">
+            <div id="container" style="height: 314px;"></div>
+        </div>
+        <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">位号报警详细信息</div></div>
+        <div class="content_button" style="border:solid 1px #dcdcdc;">
+            <div id="myGrid" tabindex="0" hidefocus="true" class="slickgrid_39885 ui-widget ui-resizable slickgrid_114842" ></div>
+        </div>
+    </div>
+    <div class="content_right" style="border:solid 1px #dcdcdc;">
+        <div >
+            <div class="rightheadtitle"><div class="headtitle_img"></div><div class="headtitle_txt">日期范围选择</div></div>
+
+            <div style="padding: 10px">
+                <div class="selectdate">
+                    <div class="sliderlabelpanel"><div class="label_left">2001</div><div class="label_right">2014</div></div>
+                    <div><span id="slideryear"  class="daisy-range-picker"></span></div>
+                </div>
+
+                <div calss="unit" style="margin-top: 10px;">
+                    <div>单元：</div>
+                    <div class="boxnumber">
+                        <div><input id="unitmanager" class='checkitem' type="checkbox" checked="checked" style="width: 20px;height: 20px;-webkit-box:-webkit-box-orient"></div>
+                        <div style="margin-top: 4px;">全部</div>
+                    </div>
+                    <div class="checkbox">
+                        <div class="selectoption">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search" style="margin-top: 10px;">
+                    <div>点位查询：</div>
+                    <div class="pointsearch">
+                        <div><input id="txtsearchtext" type="text" style="  width: 150px;"><a id="clearInput"  style="width: 10px;height: 18px;">X</a></div>
+                        <div><input id="btnQuery" onkeypress="return(clickButton());" type="button"></div>
+                    </div>
+                </div>
+
+                <div class="pointbox" style="margin-top: 10px;">
+                    <div>点位号：</div>
+                    <div class="pointnumber">
+                        <div class="boxnumber">
+                            <div><input id="pointmanager" type="checkbox" checked="checked" style="width: 20px;height: 20px;-webkit-box:-webkit-box-orient"></div>
+                            <div style="margin-top: 4px;">全部</div>
+                        </div>
+                        <div class="pointdata">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>
+<script src="../lib/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript" src="../lib/d3.csv.js"></script>
+<script type="text/javascript" src="../js/oilcomponent/d3.layout.js"></script>
+<script type="text/javascript" src="../lib/jqmeter/jqmeter.min.js"></script>
+
+
+<script type="text/javascript" src="../js/oilcomponent/parallel-coordinates-veggie.js"></script>
+
+<script type="text/javascript" src="../js/oilcomponent/underscore.js"></script>
+<script type="text/javascript" src="../js/oilcomponent/backbone.js"></script>
+
+<script src="../js/oilcomponent/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="../js/oilcomponent/filter.js"></script>
+<!-- SlickGrid -->
+<script src="../js/oilcomponent/jquery.event.drag-2.0.min.js"></script>
+<script src="../js/oilcomponent/slick.core.js"></script>
+<script src="../js/oilcomponent/slick.grid.js"></script>
+<script src="../js/oilcomponent/slick.dataview.js"></script>
+<script src="../js/oilcomponent/slick.pager.js"></script>
+<script src="../js/oilcomponent/gridm.js"></script>
+<script src="../js/oilcomponent/options.js"></script>
+
+
+<script type="text/javascript" src="../lib/range_picker.js"></script>
+<script src="../lib/highcharts.js"></script>
+<script type="text/javascript" src="../data/json_data/point_alarmdata2.js"></script>
+<script src="../js/alarmcustomanalyse.js"></script>
+
+
+
+

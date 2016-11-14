@@ -1,0 +1,256 @@
+﻿body 
+{
+    width:90%;
+    margin-left:2%;
+    font-family:'微软雅黑';
+}
+/************title***************/
+.divTitle
+{
+    width:90%;
+    height:30px;
+    text-align:center;
+    font-size:large;
+    color:White;
+    background-color:RGB(100,151,188);
+    border:1px solid black;
+    }
+/************存放btn 的div***************/
+.divContent
+{
+    width:90%;
+    height:30px;
+    margin-top:10px;
+    }
+ /************btn的样式***************/
+.btn
+{
+    margin-right:20px;
+    width:86px;
+    font-size:12pt;
+    background-color:RGB(191,191,191);
+    border:2px solid RGB(153,140,133);
+    }
+
+/************放置中间主体部分的div***************/ 
+
+ /************每部分的title的公共部分***************/     
+ .labtitle
+ {
+    background-color:RGB(255,188,29);
+    border:2px solid RGB(153,140,133);
+    font-size:11pt;
+     }
+
+    
+/************title 多维度分析***************/ 
+.divMS
+{
+    width:100%;
+    height:20px;
+    margin-top:10px;
+    text-align:center;
+    }
+.labcentertitle
+{
+    padding-left:30px;
+    padding-right:30px;
+    }
+/***********************************
+**************左边的图表************
+***********************************/ 
+.divleft
+{
+    float:left;
+    width:79%;
+    height:600px;   
+    }
+ /********图表title部分 Character Types*********/
+ .divcharttitle
+ {
+     width:100%;
+     height:20px;
+     font-size:small;
+     }
+ /************Character Types 指标计算分值左缩进***************/      
+.divPL
+{
+    padding-left:20px;
+    }
+    
+ /********图表主体部分部分+四个象限的title*********/    
+ .divcharts
+ {
+     width:100%;
+     height:300px;
+     position:relative;
+     }
+ /********图表主体部分*********/
+ .divchart
+ {
+     width:100%;
+     height:100%;
+     }
+  /********图表主体部分上方的两个title*********/
+ .divabsoluteU
+ {
+    position:absolute;
+    height:30px;
+    width:100%;
+    margin-top:20px;
+    z-index:4;
+     }
+ .divtitleUL
+ {
+    float:left;
+    margin-left:100px;
+     }
+.divtitleUR
+ {
+     float:right;
+     margin-right:20px;
+     }
+  /********图表主体部分下方的两个title*********/
+ .divabsoluteD
+ {
+     position:absolute;
+     height:30px;
+     width:100%;
+     margin-top:205px;
+     z-index:4;
+     }
+/************div 指标计算分值 样式******************/
+ .labLDtitle
+{
+    padding-left:10px;
+    padding-right:10px;
+    }
+/************div 中table样式******************/   
+ .divtable
+ {
+     width:100%;
+     height:200px;
+     overflow-y:auto;
+     }
+
+    
+/************table样式******************/
+table
+{
+    margin-left:20px;
+    width:96%;
+    height:60%;
+    border-collapse: collapse;
+    font-size:small;
+    }
+ th
+ {
+     border-bottom:1px solid RGB(153,140,133);
+     font-weight:normal;
+     text-align:right;
+     height:25px;
+     }
+ td
+ {
+     width:50px;
+     text-align:right;
+     }
+/**********特殊列的head td的背景色*************/
+.thbackcolor
+  {
+      background-color:RGB(209,242,232);
+      }
+.tbbackcolor
+{
+    background-color:RGB(233,247,227);
+    }
+ 
+     
+ /*********table中第一列文本垂直显示***********/
+ #charttype
+ {
+     text-align:center;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    }
+/*********table中第二列文本居左显示***********/
+.textL
+{
+    text-align:left;
+    width:20px;
+    }
+    
+/*************************************
+**************右侧的复选框************
+**************************************/     
+.divright
+{
+    float:left;
+    width:12%;
+    height:600px;
+    }
+    
+    
+ /********右上方复选框**********/
+.divRUtitle
+{
+    height:25px;
+    margin-top:60px;
+    }
+ .labRtitle
+{
+    height:25px;
+    padding-left:20px;
+    padding-right:20px;
+    }
+ /*********设置图标大范围的大小***********/
+ .divlenglist
+ {
+     width:100%;
+     height:14%;
+     overflow-y:auto;
+     }
+/*********设置每个图标范围的大小***********/
+  .divkind
+  {
+      width:100%;
+      height:20px;
+      }
+/*********设置每个图标图案的大小***********/
+  .divpic
+  {
+      width:12px;
+      height:12px;
+      float:left;
+      }
+ /*********设置每个图标文字的大小***********/
+   .divtext
+  {
+      width:60%;
+      height:12px;
+      font-size:small;
+      float:left;
+      padding-left:10px;
+      }
+     
+     
+      
+ /********右下方复选框**********/    
+.divRDtitle
+{
+    height:25px;
+    }
+ /*********设置复选框的大小***********/  
+.divchecklist
+{
+    width:80%;
+    height:350px;
+    overflow-y:auto;
+    }
+ /*********设置复选框文本的大小***********/
+font
+{
+    margin-left:10px;
+    font-size:xx-small;
+    }

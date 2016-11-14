@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>原油成分分析</title>
+
+    <link href="../css/htmlmodel.css" rel="stylesheet" type="text/css"/>
+
+
+    <link href="../lib/datepicker/zebra_datepicker_metallic.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="../css/oilcomponent.css" type="text/css" charset="utf-8">
+
+
+</head>
+<body class="disable-default-action">
+
+<div class="main_box">
+    <div class="content_left" style="height: 97.3%;">
+        <div id="main" style="margin-bottom: 5px;border:solid 1px #dcdcdc;">
+           <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">原油成分分析</div></div>
+                <div class="widgets">
+                <div id="pie" class="widget right">分组<br></div>
+                <div id="pager" class="info">
+                    <div class="slick-pager">
+                        <span class="slick-pager-status">查询 1153 行</span>
+                    </div>
+                </div>
+                <div id="legend"></div>
+            </div>
+                <div id="parallel" class="ui-resizable" style="height: 127px;"></div>
+        </div>
+
+        <div id="gridwidth" style=" height: 100%; border:solid 1px #dcdcdc;-webkit-box-flex: 1;">
+            <div id="contentgrid">
+                <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">原油成分明细</div></div>
+                <div id="myGrid" tabindex="0" hidefocus="true"  class="slickgrid_39885 ui-widget ui-resizable slickgrid_114842" ></div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="content_right">
+        <div style=" height: 97%;border:solid 1px #dcdcdc;">
+                <div class="rightheadtitle"><div class="headtitle_img"></div><div class="headtitle_txt">日期范围选择</div></div>
+            <div class="padding">
+                <div class="selectdate">
+                    <div class="sliderlabelpanel"><div class="label_left">2001</div><div class="label_right">2014</div></div>
+                    <div><span id="slideryear"  class="daisy-range-picker"></span></div>
+                </div>
+
+                <div id="radiocount" style="margin-top: 10px;">
+                    <div>原油类别切换：</div>
+                    <div id="radindex" style="margin-left:3px; margin-top: 10px;">
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="rad"  class="radioitem" value="石蜡基"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">石蜡基</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="rad2" class="radioitem"  value="中间基"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">中间基</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="rad3" class="radioitem"  value="环烷基"  name="radiomo"  checked></div>
+                            <div style="padding-top: 4px">环烷基</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="select_countryid" class="select_country">
+                    <div>原油产地：</div>
+                    <div id="checkbox" style="margin-left:3px; margin-top: 10px;">
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry1"  class="radioitem" value="中国"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">中国</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry2"  class="radioitem" value="蒙古"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">蒙古</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry3"  class="radioitem" value="韩国"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">韩国</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry4"  class="radioitem" value="朝鲜"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">朝鲜</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry5"  class="radioitem" value="日本"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">日本</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry6"  class="radioitem" value="菲律宾"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">菲律宾</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry7"  class="radioitem" value="越南"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">越南</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry8"  class="radioitem" value="老挝"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">老挝</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry9"  class="radioitem" value="柬埔寨"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">柬埔寨</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry10"  class="radioitem" value="缅甸"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">缅甸</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry11"  class="radioitem" value="泰国"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">泰国</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry12"  class="radioitem" value="马来西亚"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">马来西亚</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry13"  class="radioitem" value="文莱"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">文莱</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry14"  class="radioitem" value="新加坡"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">新加坡</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry15"  class="radioitem" value="印度尼西亚"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">印度尼西亚</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry16"  class="radioitem" value="英国"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">英国</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry17"  class="radioitem" value="爱尔兰"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">爱尔兰</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry18"  class="radioitem" value="荷兰"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">荷兰</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry19"  class="radioitem" value="比利时"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">比利时</div>
+                        </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry20"  class="radioitem" value="卢森堡"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">卢森堡</div>
+                        </div> <div style="display: -webkit-box;">
+                        <div><input type="checkbox" id="cutry21"  class="radioitem" value="法国"  name="radiomo" checked></div>
+                        <div style="padding-top: 4px">法国</div>
+                    </div>
+                        <div style="display: -webkit-box;">
+                            <div><input type="checkbox" id="cutry22"  class="radioitem" value="摩纳哥"  name="radiomo" checked></div>
+                            <div style="padding-top: 4px">摩纳哥</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript" src="../lib/d3.csv.js"></script>
+<script type="text/javascript" src="../lib/datepicker/zebra_datepicker.src.js"></script>
+<script type="text/javascript" src="../js/oilcomponent/d3.layout.js"></script>
+
+<script type="text/javascript" src="../js/oilcomponent/parallel-coordinates-veggie.js"></script>
+
+<script type="text/javascript" src="../js/oilcomponent/underscore.js"></script>
+<script type="text/javascript" src="../js/oilcomponent/backbone.js"></script>
+
+<script src="../js/oilcomponent/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="../js/oilcomponent/filter.js"></script>
+<!-- SlickGrid -->
+<link rel="stylesheet" href="../css/oilcomponent/slick.grid.css" type="text/css" media="screen" charset="utf-8">
+<script src="../js/oilcomponent/jquery.event.drag-2.0.min.js"></script>
+<script src="../js/oilcomponent/slick.core.js"></script>
+<script src="../js/oilcomponent/slick.grid.js"></script>
+<script src="../js/oilcomponent/slick.dataview.js"></script>
+<script src="../js/oilcomponent/slick.pager.js"></script>
+<script src="../js/oilcomponent/grid.js"></script>
+<script src="../js/oilcomponent/pie.js"></script>
+<script src="../js/oilcomponent/options.js"></script>
+<script src="../js/oilcomponent/food-table.js"></script>
+<link rel="stylesheet" href="../css/oilcomponent/style.css" type="text/css" charset="utf-8">
+
+<script src="../data/json_data/oilcomponent.js"></script>
+<script src="../js/oilcomponent.js"></script>
+<!--<link href="../css/rediobutton.css" rel="stylesheet" type="text/css"/>-->
+<!--<script src="../js/radiobuttonjs/index.js"></script>-->
+<script type="text/javascript" src="../lib/range_picker.js"></script>
+
+</html>

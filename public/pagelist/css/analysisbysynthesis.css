@@ -1,0 +1,109 @@
+.main_box{
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    /*height: 100%;*/
+    display:-webkit-box;
+}
+.content_left{
+    -webkit-box-flex:1;
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    border:solid 1px #dcdcdc;
+    margin:5px;
+}
+.content_left_top{
+    border:solid 1px #dcdcdc;
+    display:-webkit-box;
+}
+.content_left_buttom{
+    /*margin-top: 5px;*/
+    height: 100%;
+    /*border:solid 1px #dcdcdc;*/
+}
+.content_left_topleft{
+    -webkit-box-flex:1;
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    padding-right: 2px;
+}
+.content_left_topright{
+    -webkit-box-flex:1;
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    padding-left: 2px;
+}
+.content_right{
+    /*-webkit-box-flex:1;*/
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    width: 200px;
+    height: 98%;
+    /*padding: 5px;*/
+    margin:5px;
+    border:solid 1px #dcdcdc;
+}
+
+.title1{
+    font-size: 20px;
+    color: #ffffff;
+}
+.title2{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/*时间控件样式 start --------------------------------------*/
+.en-markup-crop-options {
+    top: 18px !important;left: 50% !important;margin-left: -100px !important;
+    width: 150px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+.en-markup-crop-options div div:first-of-type {margin-left: 0px !important;}
+.range-picker-axis{padding:0;position:relative;width:100px;height:2px;border:1px solid #CCC;display:inline-block;border-radius:2px;z-index:1;}
+.range-picker{position:absolute;width:10px;height:10px;border:1px solid #BBB;z-index:3;top:-5px;border-radius:2px;cursor:pointer;background-color:#FFF;}
+.range-picker.left{left:-4px;}
+.range-picker.right{right:-4px;}
+.range-picker.active{background-color:#CCC;}
+.range-selected{background-color:#CCC;z-index: 2;position: absolute;width:100%;}
+/*slider 范围选择控件结束*/
+
+.sliderlabelpanel{display: -webkit-box; }
+.sliderlabelpanel>div[class='label_left']{-webkit-box-flex: 1;text-align: left}
+.sliderlabelpanel>div[class='label_right']{-webkit-box-flex: 1;text-align: right}
+/*时间控件样式 end --------------------------------------*/
+
+/*页面美化 start --------------------------------------*/
+.headtitle{
+    height: 30px;
+    line-height: 30px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ededed));
+    display: -webkit-box;
+}
+.headtitle_img{
+    width: 15px;
+    height: 17px;
+    background-image: url('../images/ico_2.gif');
+    margin-top: 6px;
+    margin-left: 10px;
+}
+.headtitle_txt{
+    font-weight: bold;padding-right: 10px;border-bottom: solid 3px #3398de;margin-left: 10px;
+}
+.rightheadtitle{
+    height: 30px;
+    line-height: 30px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ededed));
+    display: -webkit-box;
+    margin-bottom: 5px;
+}
+/*页面美化 end --------------------------------------*/
+
+
+.chartcontent {
+    display: -webkit-box;
+}
+.content_top{
+
+}

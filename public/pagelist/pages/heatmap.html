@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../css/htmlmodel.css" rel="stylesheet" type="text/css">
+    <link href="../css/heatmap.css" rel="stylesheet" type="text/css">
+</head>
+<body class="disable-default-action">
+    <div class="main_box">
+        <div class="leftitem" style="">
+            <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">报警分布</div></div>
+            <div style="" >
+                    <div id="tooltip" class="" style="left: 431px; top: 437px;">
+                        <p><span id="value">位号:ECBA105,<br/>时间：01-01<br>
+                                              行列索引值:6,1<br>
+                                               值: 312, 264</span></p>
+                    </div>
+                <div class="buttom">
+                    <div class="buttom_1"></div>
+                    <div id="chart" style="overflow:auto; width:800px;"></div>
+                    <div class="buttom_2"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rightitem">
+            <div style=" height: 100%; margin-left: 10px;border:solid 1px #dcdcdc;">
+            <div class="rightheadtitle"><div class="headtitle_img"></div><div class="headtitle_txt">日期范围选择</div></div>
+                <div style="padding: 10px">
+                    <div class="selectdate" style="">
+                        <div class="sliderlabelpanel"><div class="label_left">2001</div><div class="label_right">2014</div></div>
+                        <div><span id="slideryear"  class="daisy-range-picker"></span></div>
+                    </div>
+                    <div class="select" style="padding:40px 0px">
+                        <div>设备类别：</div>
+                        <select id="selectoption" style="width: 100%;">
+                            <option>裂解炉能耗</option>
+                            <option>裂解炉COT</option>
+                            <option>压缩机能耗</option>
+                            <option>进料量</option>
+                        </select>
+                    </div>
+                    <div id="lengin">
+                        <div style="display: -webkit-box;margin-bottom: 5px">
+                            <div style="width: 20px;height: 20px;background-color:#c75151;margin-right: 5px; "></div><div>正常等级高级</div>
+                        </div>
+                        <div style="display: -webkit-box;margin-bottom: 5px">
+                            <div style="width: 20px;height: 20px;background-color: #f69a54;margin-right: 5px;">  </div><div>正常等级中级</div>
+                        </div>
+                        <div style="display: -webkit-box;margin-bottom: 5px">
+                            <div style="width: 20px;height: 20px;background-color: #ffafbe;margin-right: 5px;">  </div><div>正常等级低级</div>
+                        </div>
+                        <div style="display: -webkit-box;margin-bottom: 5px">
+                            <div style="width: 20px;height: 20px;background-color: #89eb88;margin-right: 5px;">  </div><div>正常等级低级</div>
+                        </div>
+                        <div style="display: -webkit-box;margin-bottom: 5px">
+                            <div style="width: 20px;height: 20px;background-color:#fff9c9;margin-right: 5px;"></div><div>无记录</div>
+                        </div>
+                        <!--<div style="display: -webkit-box;margin-bottom: 5px">-->
+                            <!--<div style="width: 20px;height: 20px;background-color:#1A693B;margin-right: 5px; "></div><div>正常等级高级</div>-->
+                        <!--</div>-->
+                        <!--<div style="display: -webkit-box;margin-bottom: 5px">-->
+                            <!--<div style="width: 20px;height: 20px;background-color: #4F8D6B;margin-right: 5px;">  </div><div>正常等级中级</div>-->
+                        <!--</div>-->
+                        <!--<div style="display: -webkit-box;margin-bottom: 5px">-->
+                            <!--<div style="width: 20px;height: 20px;background-color: #9EC2B3;margin-right: 5px;">  </div><div>正常等级低级</div>-->
+                        <!--</div>-->
+                        <!--<div style="display: -webkit-box;margin-bottom: 5px">-->
+                            <!--<div style="width: 20px;height: 20px;background-color: #D2E6E3;margin-right: 5px;">  </div><div>正常等级低级</div>-->
+                        <!--</div>-->
+                        <!--<div style="display: -webkit-box;margin-bottom: 5px">-->
+                            <!--<div style="width: 20px;height: 20px;background-color:#FFFFFF;margin-right: 5px;"></div><div>无记录</div>-->
+                        <!--</div>-->
+                        <!--<div style="display: -webkit-box;margin-bottom: 5px">-->
+                            <!--<div style="width: 20px;height: 20px;background-color: #E6D3E1;margin-right: 5px;"></div><div>低级预警</div>-->
+                        <!--</div>-->
+                        <!--<div style="display: -webkit-box;margin-bottom: 5px">-->
+                            <!--<div style="width: 20px;height: 20px;background-color: #D19EB9;margin-right: 5px;"></div><div>中级预警</div>-->
+                        <!--</div>-->
+                        <!--<div style="display: -webkit-box;margin-bottom: 5px">-->
+                            <!--<div style="width: 20px;height: 20px;background-color: #B14F7C;margin-right: 5px;"></div><div>高级预警</div>-->
+                        <!--</div>-->
+                        <!--<div style="display: -webkit-box;margin-bottom: 5px">-->
+                            <!--<div style="width: 20px;height: 20px;background-color: #9B1A53;margin-right: 5px;">  </div><div>警报</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+
+         <div>
+        </div>
+
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/range_picker.js"></script>
+<script type="text/javascript"  src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript"  src="../lib/d3.csv.js"></script>
+<script src="../data/json_data/heatmapdata.js"></script>
+<script type="text/javascript" src="../js/heatmap.js"></script>

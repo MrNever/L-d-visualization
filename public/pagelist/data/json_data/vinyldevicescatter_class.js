@@ -1,0 +1,4 @@
+/**
+ * Created by Mr_hu on 2015/5/18.
+ */
+var vinyldevicescatter_class=[{"ytag":"BA114","ycid":"0","ycname":"停炉"},{"ytag":"BA112","ycid":"0","ycname":"停炉"},{"ytag":"BA106","ycid":"1","ycname":"石脑油"},{"ytag":"BA1101","ycid":"1","ycname":"石脑油"},{"ytag":"BA1102","ycid":"1","ycname":"石脑油"},{"ytag":"BA105","ycid":"2","ycname":"轻石脑油"},{"ytag":"BA109","ycid":"2","ycname":"轻石脑油"},{"ytag":"BA107","ycid":"3","ycname":"尾油"},{"ytag":"BA113","ycid":"3","ycname":"尾油"},{"ytag":"BA115","ycid":"3","ycname":"尾油"},{"ytag":"BA1103","ycid":"4","ycname":"柴油"},{"ytag":"BA1104","ycid":"4","ycname":"柴油"},{"ytag":"BA108","ycid":"5","ycname":"轻烃"},{"ytag":"BA110","ycid":"5","ycname":"轻烃"},{"ytag":"BA111","ycid":"5","ycname":"轻烃"}]

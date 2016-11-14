@@ -1,0 +1,168 @@
+
+.checked{
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(89, 216, 206)), color-stop(0.42, rgb(89, 216, 206)), to(rgb(89, 216, 206))) 50% 50% / 100% no-repeat;
+    background-image: -ms-linear-gradient(rgb(15, 38, 72) 0%, rgb(22, 48, 89) 42%, rgb(32, 61, 105) 100%);
+}
+#top div:hover
+{
+    cursor:pointer;
+    background-color:#70a19f;
+}
+.rad2{
+    margin-left: 27px;
+    padding: 3px
+}
+/*#contentleft{*/
+    /*margin-left: 10px;;*/
+    /*position: absolute;*/
+    /*top: 23px;*/
+    /*overflow-y: auto;*/
+    /*margin-top: 10px;*/
+    /*background: #EDFDF1;*/
+/*}*/
+/*#contentright{*/
+    /*float: left;*/
+    /*height: 200px;*/
+    /*margin-left: 690px;*/
+    /*margin-top: 10px;*/
+
+/*}*/
+.DatePicker{
+    height: 25px;
+    line-height: 25px;
+    color: #666666;
+}
+.day {fill: #fff;stroke: #ccc;  }
+.month {fill: none;stroke: #000;stroke-width: 2px;  }
+.RdYlGn .q0-11{fill:rgb(53,174,235)}
+.RdYlGn .q1-11{fill:rgb(53,174,235)}
+.RdYlGn .q2-11{fill:rgb(255,174,95)}
+.RdYlGn .q3-11{fill:rgb(253,226,139)}
+.RdYlGn .q4-11{fill:rgb(255,224,134)}
+.RdYlGn .q5-11{fill:rgb(255,255,191)}
+.RdYlGn .q6-11{fill:rgb(117,186,255)}
+.RdYlGn .q7-11{fill:rgb(221,238,254)}
+.RdYlGn .q8-11{fill:rgb(117,186,255)}
+.RdYlGn .q9-11{fill:rgb(53,174,235)}
+.RdYlGn .q10-11{fill:rgb(221,238,254)}
+
+#lengin div{
+    margin: 5px;
+}
+#lengin{
+    margin-top: 40px;
+}
+#lengin p{
+    margin-left: 35px;
+    margin-top: -23px;
+}
+
+
+.main_box{
+    max-width: 100%;
+    margin: 0px auto;
+    height: 100%;
+    display:-webkit-box;
+}
+.content_left{
+    -webkit-box-flex:1;
+    margin: 10px;
+    height: 96.98%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.content_top{
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+
+}
+.content_button{
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    overflow-y: auto;
+    width:96%;
+    height: 100%;
+    margin-left: 21px;
+    margin-bottom: 27px;
+    border:solid 1px #dcdcdc;
+}
+.content_right{
+    width: 220px;
+    margin: 10px;
+    height: 96.98%;
+    border:solid 1px #dcdcdc;
+    -webkit-box-orient: vertical;
+}
+#top{
+    margin-left: 21px;
+    margin-top: 13px;
+    display: -webkit-box;
+    border:solid 1px #dcdcdc;
+}
+#top div{
+    background-color: #ededed;
+    padding: 5px 10px;
+
+}
+
+
+/*页面美化 start --------------------------------------*/
+.headtitle{
+    height: 30px;
+    line-height: 30px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ededed));
+    display: -webkit-box;
+}
+.headtitle_img{
+    width: 15px;
+    height: 17px;
+    background-image: url('../images/ico.gif');
+    margin-top: 6px;
+    margin-left: 10px;
+}
+.headtitle_txt{
+    font-weight: bold;padding-right: 10px;border-bottom: solid 3px #3398de;margin-left: 10px;
+}
+.rightheadtitle{
+    height: 30px;
+    line-height: 30px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ededed));
+    display: -webkit-box;
+    margin-bottom: 20px;
+}
+/*页面美化 end --------------------------------------*/
+
+/*时间控件样式 start --------------------------------------*/
+.en-markup-crop-options {
+    top: 18px !important;left: 50% !important;margin-left: -100px !important;
+    width: 150px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+.en-markup-crop-options div div:first-of-type {margin-left: 0px !important;}
+.range-picker-axis{padding:0;position:relative;width:100px;height:2px;border:1px solid #CCC;display:inline-block;border-radius:2px;z-index:1;}
+.range-picker{position:absolute;width:10px;height:10px;border:1px solid #BBB;z-index:3;top:-5px;border-radius:2px;cursor:pointer;background-color:#FFF;}
+.range-picker.left{left:-4px;}
+.range-picker.right{right:-4px;}
+.range-picker.active{background-color:#CCC;}
+.range-selected{background-color:#CCC;z-index: 2;position: absolute;width:100%;}
+/*slider 范围选择控件结束*/
+
+.sliderlabelpanel{display: -webkit-box; }
+.sliderlabelpanel>div[class='label_left']{-webkit-box-flex: 1;text-align: left}
+.sliderlabelpanel>div[class='label_right']{-webkit-box-flex: 1;text-align: right}
+/*时间控件样式 end --------------------------------------*/
+
+/* start pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/
+body.disable-default-action
+{
+    -webkit-touch-callout:none ;
+    -webkit-user-select:none ;
+}
+
+*:not(input,textarea) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+/* end pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/

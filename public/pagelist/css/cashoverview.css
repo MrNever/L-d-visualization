@@ -1,0 +1,280 @@
+.main{
+    min-width: 1000px;
+    margin: 0px auto;
+    padding: 0px;
+}
+.menu{
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -moz-box;
+    line-height: 35px;
+}
+.menu_button{
+    display: -webkit-box;
+    display: -moz-box;
+    margin-left: 10px;
+}
+.menu_buttonitem{
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 5px;
+    background-color: #dcdcdc;
+    cursor: pointer;
+}
+.menu_button_selected{
+    background-color: #cccccc;
+}
+.content{
+    display: -webkit-box;
+    display: -moz-box;
+    width: 100%;
+    height: 100%;
+}
+.content_left{
+    -webkit-box-flex: 1;
+    height: 100%;
+    margin: 10px;
+    margin-left:5px;
+    display: -webkit-box;
+    -webkit-box-orient:vertical;
+    border: solid 1px #dcdcdc;
+}
+.content_bar{
+    -webkit-box-flex: 1;
+    position: relative;
+    margin-top: 10px;
+}
+.content_right{
+    width: 250px;
+    -webkit-box-orient: vertical;
+    margin: 10px;
+    margin-left:5px;
+    border: solid 1px #dcdcdc;
+}
+.content_right>div{
+    padding-left: 10px;padding-right: 10px;
+}
+
+.datepick,.numberrange,.radiobutton,.checkboxbutton{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+#numberrange2{
+    margin-left: 10px;
+    margin-right: 20px;
+    padding: 0px;
+}
+.radiobutton>div{
+    display: -webkit-box;display:-webkit-box;display: -moz-box;
+}
+.radiobutton>div>div{
+    line-height: 26px;
+}
+.radiobutton>div>div>input[type='radio']{
+    width: 20px;
+    height: 20px;
+}
+.checkboxbutton>div{
+    display: -webkit-box;display:box;display: -moz-box;
+}
+.checkboxbutton>div>div{
+    line-height: 26px;
+}
+.checkboxbutton>div>div>input[type='checkbox']{
+    width: 20px;
+    height: 20px;
+}
+.devicelist{
+    max-height: 300px;
+    height: auto;
+    min-height: 80px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+.devicelist>div{
+    display: -webkit-box;display:box;display: -moz-box;
+}
+.devicelist>div>div{
+    line-height: 20px;
+}
+.devicelist>div>div>input[type='checkbox']{
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+}
+
+.numberrange{
+    width: 95%;
+    height: 20px;
+    background:-webkit-gradient(linear, 0 0, 100% 0, from(#e60000), to(#02fa3c));
+    cursor: pointer;
+}
+.numberrangetick{
+    width: 2px;
+    height: 20px;
+    background-color: #fdfa0d;
+    display: none;
+}
+.rangenumberlabel{
+    height: 20px;
+    font-size: 9px;
+    font-family: "微软雅黑";
+    color: #666666;
+    position: absolute;
+    display:-webkit-box;
+}
+.rangenumberlabel>.left{
+    min-width: 30px;
+}
+.rangenumberlabel>.center{
+    -webkit-box-flex:1;
+    text-align: center;
+    color: #feab3a;
+}
+.rangenumberlabel>.right{
+    min-width: 30px;
+}
+.datepickerpanel{
+    width: 95%;
+    height: auto;
+}
+.DatePicker{
+    height: 25px;
+    line-height: 25px;
+    color: #666666;
+    margin-bottom: 15px;
+    border: solid 1px #dcdcdc;
+}
+
+/*treemap 样式 start --------------------------------------*/
+.node {
+    border: dotted 1px #dcdcdc;
+    font: 12px "微软雅黑";
+    line-height: 12px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 2px;
+    color: #ffffff;
+}
+/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+/*treemap 样式 end --------------------------------------*/
+
+/*BubbleManager 样式 start------------------------*/
+p{
+    font-family: '微软雅黑', '宋体', 'arial';
+}
+text {
+    font: 10px sans-serif;
+}
+
+.dot {
+    stroke: #000;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.label {
+    fill: #777;
+}
+
+.year.label {
+    font: 500 196px "Helvetica Neue";
+    fill: #ddd;
+}
+
+.year.label.active {
+    fill: #aaa;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+    cursor: ew-resize;
+}
+/*BubbleManager 样式 end-----------------------*/
+.chaintable{
+    width: 100%;
+    border: 1px solid #cccccc;
+    border-collapse: collapse;
+}
+.chaintable_cel1{
+    width: 120px;
+}
+.chaintable_cel2{
+    width: 150px;
+}
+.progressbar{
+    height: 18px;
+    line-height: 18px;
+}
+.chaintable td{
+    height: 18px;
+    line-height: 18px;
+    border: 1px solid #cccccc;
+    border-collapse: collapse;
+}
+.chaintable p{
+    float: left;
+    margin: 0px;
+    margin-right: 8px;
+}
+
+/*页面美化样式修改-------------------------start*/
+.headtitle{
+    height: 30px;
+    line-height: 30px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ededed));
+    display: -webkit-box;
+}
+.headtitle_img{
+    width: 15px;
+    height: 17px;
+    background-image: url('../images/ico_2.gif');
+    margin-top: 6px;
+    margin-left: 10px;
+}
+.headtitle_txt{
+    font-weight: bold;padding-right: 10px;border-bottom: solid 3px #3398de;margin-left: 10px;
+}
+.content_right>div[class='rightheadtitle']{
+    padding-left: 0px;
+    padding-left: 0px;
+    height: 30px;
+    line-height: 30px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ededed));
+    display: -webkit-box;
+    margin-bottom: 25px;
+}
+.splitline{
+    position: absolute;
+    width: 1px;
+    border-left: dotted 1px #dcdcdc;
+}
+/* start pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/
+body.disable-default-action
+{
+    -webkit-touch-callout:none ;
+    -webkit-user-select:none ;
+}
+
+*:not(input,textarea) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+/* end pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/

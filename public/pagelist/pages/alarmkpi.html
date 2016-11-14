@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>报警kpi变化</title>
+    <link href="../lib/datepicker/zebra_datepicker_metallic.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+    <script src="../js/radiobuttonjs/jquery.js"></script>
+    <script type="text/javascript" src="../lib/datepicker/zebra_datepicker.src.js"></script>
+    <link href="../css/htmlmodel.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/alarmkpi.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div id="box">
+    <div id="top">
+        <p style="float:left;margin-top: 5px;margin-left: 10px;padding: 3px;font-family: '微软雅黑'">显示KPI维度切换：</p>
+        <div data-itemvalue="评价等级" itemvalue="Open">评价等级</div>
+        <div data-itemvalue="峰值报警率">峰值报警率</div>
+        <div data-itemvalue="平均报警率">平均报警率</div>
+        <div data-itemvalue="扰动率">扰动率</div>
+    </div>
+    <div id="contentleft"></div>
+    <div id="contentright">
+        <div>日期选择：</div>
+        <div style="width: 100px" class="datepickerpanel"><input  id="datepicker01" type='text' class='DatePicker'></div>至
+        <div style="width: 100px" class="datepickerpanel1"><input  id="datepicker02" type='text' class='DatePicker'></div>
+        <div id="radiocount" style="margin-top: 20px;">装置、单元、岗位维度切换：
+            <div id="radindex" style="margin-left: 3px;margin-top: 10px;">
+                <input type="radio" id="rad"  value="裂解单元"  name="radiomo" checked><p>裂解单元</p>
+                <input type="radio" id="rad2"  value="分离单元"  name="radiomo"><p>分离单元</p>
+                <input type="radio" id="rad3"  value="分离单元"  name="radiomo" ><p>新区单元</p>
+            </div>
+        </div>
+        <div id="lengin">
+            <div style="width: 20px;height: 20px;background-color: rgb(215,48,39)"></div><p>警报</p>
+            <div style="width: 20px;height: 20px;background-color: rgb(253,174,97)"></div><p>高级预警</p>
+            <div style="width: 20px;height: 20px;background-color: rgb(254,224,139)">  </div><p>中级预警</p>
+            <div style="width: 20px;height: 20px;background-color: rgb(255,255,191)">  </div><p>低级预警</p>
+            <div style="width: 20px;height: 20px;background-color: rgb(26,152,80)">  </div><p>正常等级高级</p>
+            <div style="width: 20px;height: 20px;background-color:rgb(102,189,99)"></div><p>正常等级中级</p>
+            <div style="width: 20px;height: 20px;background-color: rgb(166,217,106)"></div><p>正常等级低级</p>
+            <div style="width: 20px;height: 20px;background-color: rgb(217,239,139)">  </div><p>正常等级低级</p>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript" src="../lib/d3.csv.js"></script>
+<script type="text/javascript" src="../lib/hammer.js"></script>
+
+
+<script src="../js/alarmkpi.js" type="text/javascript"></script>
+<link href="../css/rediobutton.css" rel="stylesheet" type="text/css"/>
+<script src="../js/radiobuttonjs/index.js"></script>
+
+</html>

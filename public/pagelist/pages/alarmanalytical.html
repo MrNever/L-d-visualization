@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>报警分析_综合分析</title>
+    <link href="../css/htmlmodel.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/alarmanalytical.css" rel="stylesheet" type="text/css"/>
+</head>
+<body class="disable-default-action">
+    <div id="box" class="maindiv">
+        <div id="contentleft" class="content_left">
+            <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">操作干预历史趋势</div></div>
+            <div id="container" class="content_top"></div>
+            <div id="alarmkpiarea" class="content_kpi"></div>
+            <div  class="content_bottom">
+                <div class="content_bottom_left">
+                    <div class="headtitle"><div class="headtitle_img"></div><div id="canadartitle" class="headtitle_txt"></div></div>
+                    <div id="allendarwithalarmnumright" class="calarnachart"></div>
+                    <div class="legendpanel">
+                        <div class="legenditem"><div class="coloread" style="background-color: #89eb88;"></div><div class="name">可预测的</div></div>
+                        <div class="legenditem"><div class="coloread" style="background-color: #fff9c9;"></div><div class="name">鲁棒的</div></div>
+                        <div class="legenditem"><div class="coloread" style="background-color: #f69a54;"></div><div class="name">稳定的</div></div>
+                        <div class="legenditem"><div class="coloread" style="background-color: #ffafbe;"></div><div class="name">反应性的</div></div>
+                        <div class="legenditem"><div class="coloread" style="background-color: #c75151;"></div><div class="name">超负荷的</div></div>
+                    </div>
+                </div>
+                <div class="content_bottom_right">
+                    <div class="headtitle"><div class="headtitle_img"></div><div id="socttortitle" class="headtitle_txt"></div></div>
+                    <div id="alarmsacttor" class="sacctorchartsty"></div>
+                </div>
+            </div>
+        </div>
+        <div id="contentright" class="content_right">
+            <div class="rightheadtitle"><div class="headtitle_img"></div><div class="headtitle_txt">日期范围选择</div></div>
+            <div class="selectdate">
+                <div class="sliderlabelpanel"><div class="label_left">2001</div><div class="label_right">2014</div></div>
+                <div><span id="slideryear"  class="daisy-range-picker"></span></div>
+            </div>
+            <div class="righttitle">维度选择</div>
+            <div class="selectfilter">
+                <select id="dimfilter">
+                    <option value="device">装置</option>
+                    <option value="unit">单元</option>
+                    <option value="post">岗位</option>
+                </select>
+            </div>
+            <div class="righttitle">报警类型选择</div>
+            <div class="selectfilter">
+                   <select id="filter">
+                       <option value="峰值报警率">峰值报警率</option>
+                       <option value="平均报警率">平均报警率</option>
+                       <option value="扰动率">扰动率</option>
+                       <option value="报警数">报警数量</option>
+                   </select>
+           </div>
+            <div class="righttitle">综合评价等级</div>
+            <div class="selectfilter">
+                <select id="ratings_select">
+                    <option value="峰值报警率">峰值报警率等级</option>
+                    <option value="平均报警率">平均报警率等级</option>
+                    <option value="扰动率">扰动率等级</option>
+                </select>
+            </div>
+            <div class="righttitle">报警统计</div>
+            <div class="selectfilter">
+                <select id="alarm_typeselect">
+                    <option value="报警数">报警数量</option>
+                    <option value="操作干预报警数">操作干预报警数量</option>
+                </select>
+            </div>
+            <div id="sacttorkpipanel" class="sacttorpanelsty"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript"  src="../lib/jquery-1.10.2.js"></script>
+<script type="text/javascript"  src="../lib/highcharts.js"></script>
+<script type="text/javascript"  src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript"  src="../lib/d3.csv.js"></script>
+<!--start json串-->
+<script src="../data/json_data/alarm_history.js" type="text/javascript"></script>
+<script src="../data/json_data/alarm_vareainfo.js" type="text/javascript"></script>
+<script src="../data/json_data/alarm_jam_history.js" type="text/javascript"></script>
+<!--end json串-->
+<script type="text/javascript" src="../lib/range_picker.js"></script>
+<script type="text/javascript" src="../lib/jqmeter/jqmeter.min.js"></script>
+<script type="text/javascript" src="../lib/colorconvert.js"></script>
+
+<script src="../js/alarmdatamanager.js"></script>
+<script src="../js/alarmanalytical.js"></script>

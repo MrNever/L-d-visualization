@@ -1,0 +1,99 @@
+﻿/*---以下是安全评估等级趋势分析页面的样式表----*/
+html
+{
+    height:100%;
+    }
+body 
+{
+width:98%;
+height:100%;
+margin-left:auto;
+margin-right:auto;
+font-family:'微软雅黑';
+}
+.box
+{
+    height:100%;
+    overflow-y:auto;
+    }
+#topbar{
+height: 35px;
+border: 1px solid rgb(6, 20, 50);
+background-color: rgb(78, 127, 146);
+margin-bottom: 2px;
+text-align:center;
+}
+
+#topbar span{
+line-height: 35px;
+font-weight: bold;
+font-size: 18px;
+color: white;
+}
+
+.breaks
+{
+border: 1px solid rgb(66, 94, 105);
+margin-top: 5px;
+}
+
+.core p 
+{
+background-color: rgb(141, 182, 194);
+line-height: 23px;
+border-bottom: 1px solid rgb(66, 94, 105);
+font-weight: bold;
+font-size: 14px;
+margin-top: auto;
+margin-bottom: auto;
+text-align: left;
+padding-left: 8px;
+}
+.core
+{
+    height:100%;
+    }
+#A1,
+#A3
+{
+width: 49.5%;
+float: left;    
+}
+#A2,
+#A4
+{
+width: 49.5%;
+float: right;
+}
+.area-djqs
+{
+ overflow: hidden;
+}
+.area-djqs .area
+{
+margin-top: -66px;
+width: 108%;
+margin-left: -15px;
+}
+
+.vinydevicemenu
+{
+    height: 30px;
+    display: -webkit-box;
+    margin: 10px;
+    margin-left: 0px}
+.vinydevicemenu_titledate
+{
+    font-size: 14px;
+    line-height: 30px;
+    }
+.vinydevicemenu_date
+{
+    margin-left: 10px;
+    }
+.DatePicker
+{
+    height: 25px;
+    color: #666666;
+    width: 120px;
+    }

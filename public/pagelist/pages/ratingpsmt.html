@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>过程安全管理评估指标的等级趋势分析</title>
+    <link href="../lib/datepicker/zebra_datepicker_metallic.css" rel="stylesheet" type="text/css" />
+    <link href="../css/ratingpsmt.css" rel="stylesheet" type="text/css" />
+    <script src="../lib/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="../lib/datepicker/zebra_datepicker.src.js" type="text/javascript"></script>
+
+    <script src="../lib/hoop/tangram.js" type="text/javascript"></script>
+    <script src="../lib/hoop/raphael.js" type="text/javascript"></script>
+    <script src="../lib/hoop/funs.js" type="text/javascript"></script>
+    <script src="../lib/hoop/intrt.js" type="text/javascript"></script>
+    <script src="../js/ratingpsmt.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="box">
+    <div id="topbar"><span>过程安全管理评估指标的等级趋势分析</span></div>
+    <div class="vinydevicemenu">
+        <div class="vinydevicemenu_titledate">日期范围选择:</div>
+        <div class="vinydevicemenu_date"><input  id="datepicker01" type='text' class='DatePicker'/></div>
+        <div class="vinydevicemenu_titledate">至:</div>
+        <div class="vinydevicemenu_date"><input  id="datepicker02" type='text' class='DatePicker'/></div>
+    </div>
+    <div id="centre" class="core">
+        <div id="A1" class="breaks">
+            <p>安全意识与能力要素的趋势分析</p>
+            <div class="area-djqs">
+                <div class="area" id="area_A1"></div>
+            </div>
+        </div>
+        <div id="A2" class="breaks">
+            <p>事故事件与应急要素的趋势分析</p>
+            <div class="area-djqs">
+                <div class="area"  id="area_A2"></div>
+            </div>
+        </div>
+        <div id="A3" class="breaks">
+            <p>风险识别要素的趋势分析</p>
+            <div class="area-djqs">
+                <div class="area"  id="area_A3"></div>
+            </div>
+        </div>
+        <div id="A4" class="breaks">
+            <p>过程安全控制要素的趋势分析</p>
+            <div class="area-djqs">
+                <div class="area" id="area_A4"></div>
+            </div>
+        </div>
+    </div>
+ </div>
+</body>
+</html>
+
+<script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript" src="../lib/d3.csv.js"></script>
+(function ($) {
+    $.fn.serializeJson = function () {
+        var serializeObj = {};
+        $(this.serializeArray()).each(function () {
+            serializeObj[this.name] = this.value;
+        });
+        return serializeObj;
+    };
+})(jQuery);

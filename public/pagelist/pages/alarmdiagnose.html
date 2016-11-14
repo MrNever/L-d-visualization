@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../css/htmlmodel.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/alarmdiagnose.css" rel="stylesheet" type="text/css"/>
+    <!--树形控件-->
+    <link type="text/css"  href="../lib/tree.src/css/tree.css" rel="stylesheet" />
+
+    <link type="text/css"  href="../css/alarmdiagnose.css" rel="stylesheet" />
+</head>
+<body class="disable-default-action">
+<div class="main_box">
+    <div id="content_left_div" class="content_left">
+        <div class="content_toppanel">
+            <div class="headtitle"><div class="headtitle_img"></div><div id="canadartitle" class="headtitle_txt">设备报警分布</div></div>
+            <div class="content_top_Panel">
+                <div id="kpitreemap" class="content_top"></div>
+            </div>
+        </div>
+        <div class="content_button">
+            <div class="content_button_left">
+                <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">岗位设备报警情况</div></div>
+                <div  id="alarmnumber_bar"  class="content_button_left"></div>
+            </div>
+            <div class="content_button_right">
+                <div class="headtitle"><div class="headtitle_img"></div><div  class="headtitle_txt">报警数TopN</div></div>
+                <div  id="alarmtopn_bar" class="content_button_left"></div>
+            </div>
+        </div>
+    </div>
+    <div class="content_right">
+        <div class="headtitle"><div class="headtitle_img"></div><div  class="headtitle_txt">日期范围选择</div></div>
+        <div class="selectdate">
+            <div class="sliderlabelpanel"><div class="label_left">2001</div><div class="label_right">2014</div></div>
+            <div><span id="slideryear"  class="daisy-range-picker"></span></div>
+        </div>
+        <div class="righttitle">块大小选择</div>
+        <div class="selectfilter">
+            <select id="alarmcount_size_select">
+                <option value="报警数">报警数量</option>
+                <option value="操作干预报警数">操作干预报警数量</option>
+            </select>
+        </div>
+        <div class="righttitle">块颜色选择</div>
+        <div class="selectfilter">
+            <select id="alarmcount_color_select">
+                <option value="平均报警率">平均报警率</option>
+                <option value="峰值报警率">峰值报警率</option>
+                <option value="扰动率">扰动率</option>
+            </select>
+        </div>
+        <div class="selectfilter">
+            <div id="alarmcount_color_bar" class="colorrang_bar">
+                <div class="numbercenter"><div class="numberleft"></div><div class="numberright"></div></div>
+            </div>
+        </div>
+        <div class="righttitle">报警数量</div>
+        <div class="selectdate">
+            <div class="sliderlabelpanel"><div class="label_left">0</div><div class="label_right">0</div></div>
+            <div id="slider_alarmcount_panel"><span id="slider_alarmcount"  class="daisy-range-picker slider_number"></span></div>
+        </div>
+        <div class="righttitle">操作干预报警数量</div>
+        <div class="selectdate">
+            <div class="sliderlabelpanel"><div class="label_left">0</div><div class="label_right">0</div></div>
+            <div id="slider_alarmmeddlecount_panel"><span id="slider_alarmmeddlecount"  class="daisy-range-picker slider_number"></span></div>
+        </div>
+        <div class="righttitle">平均报警率</div>
+        <div class="selectdate">
+            <div class="sliderlabelpanel"><div class="label_left">0</div><div class="label_right">0</div></div>
+            <div id="slider_mean_panel"><span id="slider_mean"  class="daisy-range-picker slider_number"></span></div>
+        </div>
+        <div class="righttitle">峰值报警率</div>
+        <div class="selectdate">
+            <div class="sliderlabelpanel"><div class="label_left">0</div><div class="label_right">0</div></div>
+            <div id="slider_max_panel"><span id="slider_max"  class="daisy-range-picker slider_number"></span></div>
+        </div>
+        <div class="righttitle">扰动率</div>
+        <div class="selectdate">
+            <div class="sliderlabelpanel"><div class="label_left">0</div><div class="label_right">0</div></div>
+            <div id="slider_disturb_panel"><span id="slider_disturb"  class="daisy-range-picker slider_number"></span></div>
+        </div>
+        <div class="righttitle">TopN类型</div>
+        <div class="selectfilter">
+            <select id="alarmcount_topn_select">
+                <option value="报警数">报警数</option>
+                <option value="操作干预报警数">操作干预报警数</option>
+            </select>
+        </div>
+        <div class="selectfilter">
+            <div id="unittree"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript"  src="../lib/jquery-1.10.2.js"></script>
+<script type="text/javascript"  src="../lib/highcharts.js"></script>
+<script type="text/javascript"  src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript"  src="../lib/d3.csv.js"></script>
+<script type="text/javascript" src="../lib/range_picker.js"></script>
+<script type="text/javascript" src="../lib/colorconvert.js"></script>
+<script type="text/javascript" src="../lib/jqmeter/jqmeter.min.js"></script>
+
+
+<!--树形列表-->
+<script type="text/javascript" src="../lib/tree.src/src/Plugins/jquery.tree.js"></script>
+<!--json 数据-->
+<script type="text/javascript"  src="../data/json_data/position_listdata.js"></script>
+<script type="text/javascript" src="../data/json_data/point_alarmdata.js"></script>
+<script type="text/javascript" src="../data/json_data/device_everydaykpi.js"></script>
+
+<script type="application/javascript" src="../js/alarmdatamanager.js"></script>
+
+<script type="application/javascript" src="../js/alarmdiagnose.js"></script>

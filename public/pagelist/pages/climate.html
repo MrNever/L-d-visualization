@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>易挥发泄漏气体变化</title>
+    <link href="../lib/datepicker/zebra_datepicker_metallic.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+    <script src="../js/radiobuttonjs/jquery.js"></script>
+    <script type="text/javascript" src="../lib/datepicker/zebra_datepicker.src.js"></script>
+    <link href="../css/htmlmodel.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/climate.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body class="disable-default-action">
+
+<div class="main_box">
+    <div class="content_left" style="border:solid 1px #dcdcdc;">
+        <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">报警KPI变化</div></div>
+        <div >
+        <div class="content_top">
+            <div id="top">
+              <!--//  <div style="float:left;margin-top: 5px;margin-left: 10px;padding: 3px;font-family: '微软雅黑'">显示KPI维度切换：</div>-->
+                <div data-itemvalue="VOC">VOC</div>
+                <div data-itemvalue="H2S">H2S</div>
+                <div data-itemvalue="SO2">SO2</div>
+            </div>
+        </div>
+        <div class="content_button">
+            <div id="contentleft"></div>
+        </div>
+    </div>
+    </div>
+    <div class="content_right">
+        <div class="rightheadtitle"><div class="headtitle_img"></div><div class="headtitle_txt">日期范围选择</div></div>
+
+        <div style="padding: 10px">
+            <div>日期选择：</div>
+            <div class="selectdate">
+                <div class="sliderlabelpanel"><div class="label_left">2001</div><div class="label_right">2014</div></div>
+                <div><span id="slideryear"  class="daisy-range-picker"></span></div>
+            </div>
+            <!--<div style="width: 100px" class="datepickerpanel"><input  id="datepicker01" type='text' class='DatePicker'></div>至-->
+            <!--<div style="width: 100px" class="datepickerpanel1"><input  id="datepicker02" type='text' class='DatePicker'></div>-->
+            <div id="radiocount" style="margin-top: 20px;">监测地点：
+                <div id="radindex" style="margin-left: 10px;margin-top: 10px;">
+                    <input type="radio" id="rad"  value="公司机关"  name="radiomo" checked><p>公司机关</p>
+                    <input type="radio" id="rad2"  value="运保中心"  name="radiomo"><p>运保中心</p>
+                    <input type="radio" id="rad3"  value="凤凰亭"  name="radiomo" ><p>凤凰亭</p>
+                    <input type="radio" id="rad4"  value="牛口峪"  name="radiomo" ><p>牛口峪</p>
+                </div>
+            </div>
+            <div id="lengin">
+                <div style="width: 20px;height: 20px;background-color:#c75151 "></div><p>含量高(>300ppb)</p>
+                <div style="width: 20px;height: 20px;background-color: #f69a54"></div><p>含量偏高(240-300ppb)</p>
+                <!--<div style="width: 20px;height: 20px;background-color: #f8e3a8">  </div><p></p>-->
+                <div style="width: 20px;height: 20px;background-color: #ffafbe">  </div><p>含量偏正常(180-240ppb)</p>
+                <div style="width: 20px;height: 20px;background-color: #fff9c9">  </div><p>含量正常(120-180ppb)</p>
+                <!--<div style="width: 20px;height: 20px;background-color:#75baff"></div><p></p>-->
+                <div style="width: 20px;height: 20px;background-color: #89eb88"></div><p>含量低(<=120ppb)</p>
+                <!--<div style="width: 20px;height: 20px;background-color: #ddeefe">  </div><p></p>-->
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+
+<script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript" src="../lib/d3.csv.js"></script>
+<script type="text/javascript" src="../lib/hammer.js"></script>
+
+<script src="../data/json_data/calendarview.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="../lib/range_picker.js"></script>
+<script src="../js/climate.js" type="text/javascript"></script>
+<link href="../css/rediobutton.css" rel="stylesheet" type="text/css"/>
+<script src="../js/radiobuttonjs/index.js"></script>
+
+</html>

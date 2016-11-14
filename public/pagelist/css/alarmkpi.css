@@ -1,0 +1,69 @@
+#box{
+    min-width: 700px;
+    max-width: 980px;
+    margin: 0px auto;
+    padding: 0px;
+}
+#top div{
+    float: left;
+    margin: 5px;;
+    border:1px;
+    background-color: #f6f5ec;
+    padding: 3px;
+    font-family: '微软雅黑';
+}
+.checked{
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(89, 216, 206)), color-stop(0.42, rgb(89, 216, 206)), to(rgb(89, 216, 206))) 50% 50% / 100% no-repeat;
+    background-image: -ms-linear-gradient(rgb(15, 38, 72) 0%, rgb(22, 48, 89) 42%, rgb(32, 61, 105) 100%);
+}
+#top div:hover
+{
+    cursor:pointer;
+    background-color:#70a19f;
+}
+.rad2{
+    margin-left: 27px;
+    padding: 3px
+}
+#contentleft{
+    margin-left: 10px;;
+    position: absolute;
+    top: 23px;
+    overflow-y: auto;
+    margin-top: 10px;
+    background: #EDFDF1;
+}
+#contentright{
+    float: left;
+    height: 200px;
+    margin-top: 10px;
+}
+.DatePicker{
+    height: 25px;
+    line-height: 25px;
+    color: #666666;
+}
+.day {fill: #fff;stroke: #ccc;  }
+.month {fill: none;stroke: #000;stroke-width: 2px;  }
+.RdYlGn .q0-11{fill:rgb(253,174,97)}
+.RdYlGn .q1-11{fill:rgb(215,48,39)}
+.RdYlGn .q2-11{fill:rgb(244,109,67)}
+.RdYlGn .q3-11{fill:rgb(253,174,97)}
+.RdYlGn .q4-11{fill:rgb(254,224,139)}
+.RdYlGn .q5-11{fill:rgb(255,255,191)}
+.RdYlGn .q6-11{fill:rgb(217,239,139)}
+.RdYlGn .q7-11{fill:rgb(166,217,106)}
+.RdYlGn .q8-11{fill:rgb(102,189,99)}
+.RdYlGn .q9-11{fill:rgb(26,152,80)}
+.RdYlGn .q10-11{fill:rgb(166,217,106)}
+
+#lengin div{
+    margin: 5px;
+}
+#lengin{
+    margin-top: 40px;
+}
+#lengin p{
+    margin-left: 35px;
+    margin-top: -23px;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>乙烯装置能耗分析-Scatter</title>
+    <link href="../css/htmlmodel.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/alarmtreemapother/jquery.range.css" type="text/css"/>
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+        /* start pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/
+        body.disable-default-action
+        {
+            -webkit-touch-callout:none ;
+            -webkit-user-select:none ;
+        }
+
+        *:not(input,textarea) {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }
+        /* end pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/
+        .maindiv{min-width: 1000px;margin: 0px auto;-webkit-box-flex:1;display: -webkit-box;}
+        .vinyl_left{-webkit-box-flex: 1;margin: 10px;display: -webkit-box;-webkit-box-orient: vertical;}
+        .vinyl_rihgt{width: 220px;margin: 10px;margin-left:0px;border: solid 1px #dcdcdc;-webkit-box-orient: vertical;}
+        .vinyl_rihgt>div{padding-left: 10px;padding-right: 10px}
+        .vinyl_rihgt>div[class='headtitle']{padding:0px;}
+        .vinyl_top{height: 270px;border: solid 1px #dcdcdc;display: -webkit-box;-webkit-box-orient: vertical;}
+        .vinyl_chartsty{-webkit-box-flex: 1;}
+        .vinyl_kpi{height: 70px;display: -webkit-box;overflow-x: auto;border: solid 1px #c0c8c9;}
+        .vinyl_bottom{
+            -webkit-box-flex: 1;
+            background-color: #FFFFFF;
+            position: relative;
+            border: solid 1px #dcdcdc;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            margin-top: 5px;
+        }
+        .vinyl_sacttorsty{-webkit-box-flex: 1;}
+
+        /* slider 范围选择控件开始*/
+        .en-markup-crop-options {
+            top: 18px !important;left: 50% !important;margin-left: -100px !important;
+            width: 150px !important;
+            border: 2px rgba(255,255,255,.38) solid !important;
+            border-radius: 4px !important;
+        }
+        .en-markup-crop-options div div:first-of-type {margin-left: 0px !important;}
+        .range-picker-axis{padding:0;position:relative;width:158px;height:2px;border:1px solid #CCC;display:inline-block;border-radius:2px;z-index:1;}
+        .range-picker{position:absolute;width:10px;height:10px;border:1px solid #BBB;z-index:3;top:-5px;border-radius:2px;cursor:pointer;background-color:#FFF;}
+        .range-picker.left{left:-4px;}
+        .range-picker.right{right:-4px;}
+        .range-picker.active{background-color:#CCC;}
+        .range-selected{background-color:#CCC;z-index: 2;position: absolute;width:100%;}
+        /*slider 范围选择控件结束*/
+
+        .vinyl_rihgt>div[class='topspace']{margin-top: 8px;}
+        .sliderlabelpanel{display: -webkit-box;margin-top: 8px;}
+        .sliderlabelpanel>div[class='label_left']{-webkit-box-flex: 1;text-align: left}
+        .sliderlabelpanel>div[class='label_right']{-webkit-box-flex: 1;text-align: right}
+        .energyliststy>div{display: -webkit-box;}
+        .energyliststy>div>div{line-height: 20px;}
+        .energyliststy>div>div>input[type='checkbox']{width:20px;height: 20px;cursor: pointer}
+        .yseriesliststy>div{display: -webkit-box;}
+        .yseriesliststy>div>div{line-height: 20px;}
+        .yseriesliststy>div>div>input[type='radio']{width:20px;height: 20px;cursor: pointer}
+        .deviceliststy{max-height: 420px;overflow-y: auto}
+        .deviceliststy>div{display: -webkit-box;}
+        .deviceliststy>div>div{line-height: 20px;}
+        .deviceliststy>div>div>input[type='checkbox']{width:20px;height: 20px;cursor: pointer}
+
+        .vinyl_kpi>div{min-width: 60px;display: -webkit-box;-webkit-box-orient: vertical;border-right: dotted 1px #dcdcdc;-webkit-box-flex: 1;}
+        .vinyl_kpi>div>div[class='groupname']{text-align: center;height: 30px;line-height: 30px;font-size: 14px;}
+        .vinyl_kpi>div>div[class='value']{text-align: center;font-weight: bold;color: #666666;height: 30px;font-size: 14px;}
+
+        .axis path,.axis line {fill: none;stroke:#b6b6b6;shape-rendering: crispEdges;}
+        /*.tick line{fill:none;stroke:none;}*/
+        .tick text{fill:#666666;}
+        g.journal.active{cursor:pointer;}
+        text.label{font-size:12px;font-weight:bold;cursor:pointer;}
+        text.value{font-size:12px;font-weight:bold;}
+        /* Copyright 2014 Evernote Corporation. All rights reserved. */
+        .en-markup-crop-options {
+            top: 18px !important;
+            left: 50% !important;
+            margin-left: -100px !important;
+            width: 200px !important;
+            border: 2px rgba(255,255,255,.38) solid !important;
+            border-radius: 4px !important;
+        }
+
+        .en-markup-crop-options div div:first-of-type {
+            margin-left: 0px !important;
+        }
+        /*散点大小与数值对照表*/
+        .devicecirclepanel{
+            position: absolute;
+            right: 20px;
+            top: 30px;
+            z-index: 5;
+            width: 80px;
+        }
+        .devicecirclepanel>.circleitem{
+            display: -webkit-box;line-height: 17px;
+        }
+        .devicecirclepanel>.circleitem>.circle_panel{
+            width: 20px;
+        }
+        .devicecirclepanel>.circleitem>.circle_panel>.circle{
+            background-color: #666666;
+        }
+        .devicecirclepanel>.circleitem>.circletext{
+            -webkit-box-flex: 1;
+            text-align: left;
+            color: #000000;
+         }
+        .sacctor_color_legend{
+            position: absolute;
+            min-width: 60px;
+            position: absolute;
+            right: 30px;
+            bottom:18px;
+            z-index: 5;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+        .sacctor_color_legend>.colorlegend_item{
+            line-height: 20px;
+            height: 20px;
+            color: #FFFFFF;
+            display: -webkit-box;
+            margin-top: 5px;
+        }
+        /*页面美化---------------start*/
+        .headtitle{
+            height: 30px;
+            line-height: 30px;
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ededed));
+            display: -webkit-box;
+        }
+        .headtitle_img{
+            width: 15px;
+            height: 17px;
+            background-image: url('../images/ico_2.gif');
+            margin-top: 6px;
+            margin-left: 10px;
+        }
+        .headtitle_txt{
+            font-weight: bold;padding-right: 10px;border-bottom: solid 3px #3398de;margin-left: 10px;
+        }
+        .sacctor_color_legend>.colorlegend_item>.item_color{
+            width: 15px;height: 15px;margin-top: 3px;
+        }
+        .sacctor_color_legend>.colorlegend_item>.text{
+            height: 20px;line-height: 20px;margin-left: 5px;
+        }
+    </style>
+</head>
+<body class="disable-default-action">
+<div class="maindiv">
+ <div id="vinyl_leftcontent" class="vinyl_left">
+     <div class="vinyl_top">
+         <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">设备能耗历史曲线</div></div>
+         <div  id="vinyl_historychart"  class="vinyl_chartsty"></div>
+     </div>
+     <div class="vinyl_bottom">
+         <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">原料种类与原料量</div></div>
+         <div  id="vinyl_sacctor" class="vinyl_sacttorsty"></div>
+     </div>
+ </div>
+ <div class="vinyl_rihgt">
+        <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">时间范围选择</div></div>
+        <div class="sliderlabelpanel"><div class="label_left">2001</div><div class="label_right">2014</div></div>
+        <div><span id="slideryear"  class="daisy-range-picker"></span></div>
+        <div class="topspace">分析项选择：</div>
+        <div><div id="yserieslist" class="yseriesliststy"></div></div>
+         <div class="topspace">位号选择：</div>
+         <div><div id="devicelist" class="deviceliststy"></div></div>
+ </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/range_picker.js"></script>
+<script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript" src="../lib/d3.csv.js"></script>
+<script type="text/javascript" src="../lib/highcharts.js"></script>
+<script type="text/javascript" src="../lib/colorconvert.js"></script>
+<script type="text/javascript" src="../lib/jqmeter/jqmeter.min.js"></script>
+<!--json 数据-->
+<script type="text/javascript" src="../data/json_data/tce_history.js"></script>
+<script type="text/javascript" src="../data/json_data/vinyldevicescatter_class.js"></script>
+<script type="text/javascript" src="../data/json_data/vinyldevicescatter_cot.js"></script>
+<script type="text/javascript" src="../data/json_data/vinyldevicescatter_jll.js"></script>
+<script type="text/javascript" src="../data/json_data/vinyldevicescatter_rlylb.js"></script>
+
+<script type="text/javascript" src="../js/vinyldevicescatter.js"></script>

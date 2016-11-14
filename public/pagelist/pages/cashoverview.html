@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>现金流总览</title>
+    <link href="../css/htmlmodel.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/cashoverview.css" type="text/css" rel="stylesheet"/>
+    <link href="../lib/datepicker/zebra_datepicker_metallic.css" type="text/css" rel="stylesheet"/>
+</head>
+<body onselectstart="return false" class="disable-default-action">
+<div class="main">
+    <div id="content_2" class="content">
+        <div class="content_left">
+            <div class="headtitle"><div class="headtitle_img"></div><div class="headtitle_txt">进度完成分析</div></div>
+            <div class="content_bar"></div>
+        </div>
+        <div class="content_right">
+            <div class="rightheadtitle"><div class="headtitle_img"></div><div class="headtitle_txt">日期范围选择</div></div>
+            <div>现金流范围筛选:</div>
+            <div id="numberrange2" class="numberrange"></div>
+            <div>现金流类型：</div>
+            <div class="radiobutton">
+                <div><div><input type="radio" class="radioitem" name="radiomo2" checked="checked" value="日现金流"></div><div>日现金流</div></div>
+                <div><div><input type="radio" class="radioitem" name="radiomo2" value="累计现金流"></div><div>累计现金流</div></div>
+                <div><div><input type="radio" class="radioitem" name="radiomo2" value="预计现金流" ></div><div>预计现金流</div></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript" src="../lib/d3.csv.js"></script>
+<script type="text/javascript" src="../lib/hammer.js"></script>
+<script type="text/javascript" src="../lib/datepicker/zebra_datepicker.src.js"></script>
+
+<script type="text/javascript" src="../js/cashoverview.js"></script>
+<script type="text/javascript" src="../js/cashkpianager.js"></script>

@@ -1,0 +1,160 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.maindiv{min-width: 1000px;margin: 0px auto;display: -webkit-box;-webkit-box-flex: 1;}
+.content_left{-webkit-box-flex: 1;margin: 10px;margin-right:5px;display: -webkit-box;-webkit-box-orient: vertical;}
+.content_right{
+    width: 200px;
+    -webkit-box-orient: vertical;
+    margin: 10px;
+    margin-left:5px;
+    border: solid 1px #dcdcdc;
+}
+.content_right>div{
+    padding-left: 10px;padding-right: 10px;
+}
+.content_top{height: 250px;border: solid 1px #dcdcdc;}
+.content_kpi{height: 60px;display: -webkit-box;border: solid 1px #dcdcdc;background-color: #f8f8f8;margin-top: 5px;margin-bottom: 5px;}
+.content_kpi>div{min-width: 60px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-box-flex: 1;border-right: solid 1px #dcdcdc;}
+.content_kpi>div>div{text-align: center;line-height: 20px;}
+.content_kpi>div>div[class='group']{font-weight: bold;color: #898989;}
+.content_bottom{-webkit-box-flex: 1;display:-webkit-box;}
+.content_bottom_left{width: 600px;display: -webkit-box;-webkit-box-orient: vertical;border: solid 1px #dcdcdc;}
+.select{display: -webkit-box;-webkit-box-orient: vertical;text-align: center;}
+.select>select{width: 100%;border: solid 1px #dcdcdc;font-family: "微软雅黑", "宋体", "Arial";font-size: 12px;color: #666666;}
+.calarnachart{position: relative;}
+.content_bottom_right{-webkit-box-flex: 1;display: -webkit-box;-webkit-box-orient: vertical;border: solid 1px #dcdcdc;}
+.sacctorchartsty{-webkit-box-flex: 1;position: relative;}
+.sliderlabelpanel{display: -webkit-box;}
+.sliderlabelpanel>div[class='label_left']{-webkit-box-flex: 1;text-align: left}
+.sliderlabelpanel>div[class='label_right']{-webkit-box-flex: 1;text-align: right}
+
+/*日历控件必须样式---------开始*/
+.day {fill: #fff;stroke: #ccc;  }
+.month {fill: none;stroke: #000;stroke-width: 1px;  }
+/*日历控件必须样式---------结束*/
+
+/* slider 范围选择控件开始*/
+.en-markup-crop-options {
+    top: 18px !important;left: 50% !important;margin-left: -100px !important;
+    width: 150px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+.en-markup-crop-options div div:first-of-type {margin-left: 0px !important;}
+.range-picker-axis{padding:0;position:relative;width:158px;height:2px;border:1px solid #CCC;display:inline-block;border-radius:2px;z-index:1;}
+.range-picker{position:absolute;width:10px;height:10px;border:1px solid #BBB;z-index:3;top:-5px;border-radius:2px;cursor:pointer;background-color:#FFF;}
+.range-picker.left{left:-4px;}
+.range-picker.right{right:-4px;}
+.range-picker.active{background-color:#CCC;}
+.range-selected{background-color:#CCC;z-index: 2;position: absolute;width:100%;}
+/*slider 范围选择控件结束*/
+
+.righttitle{margin-top:5px;font-weight: bold;line-height: 25px;}
+.selectfilter>select{width: 100%;cursor: pointer;height: 28px;}
+.monthrighttitle{font-weight: bold;line-height: 25px;margin-top:5px;}
+
+/*散点大小与数值对照表*/
+.devicecirclepanel{
+    z-index: 5;
+    width: 100%;
+}
+.devicecirclepanel>.circleitem{
+    display: -webkit-box;line-height: 17px;
+}
+.devicecirclepanel>.circleitem>.circle_panel{
+    width: 20px;
+}
+.devicecirclepanel>.circleitem>.circle_panel>.circle{
+    background-color: #666666;margin-left: 10px;
+}
+.devicecirclepanel>.circleitem>.circletext{
+    -webkit-box-flex: 1;
+    text-align: left;
+    color: #dcdcdc;
+    padding-left: 90px;
+}
+.devicerangecolor{
+    margin-top: 10px;
+    z-index: 5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.devicerangecolor>.colorrange{
+    height: 20px;
+    background:-webkit-gradient(linear, 0 0, 100% 0, from(#ed93a6), to(#a31f28));
+}
+.devicerangecolor>.rangeitems{
+    height: 15px;
+    line-height: 15px;
+    display: -webkit-box;
+}
+.devicerangecolor>.rangeitems>div{
+    color: #666666;
+}
+.devicerangecolor>.rangeitems>.leftitem{
+    -webkit-box-flex: 1;
+    text-align: left;
+}
+.devicerangecolor>.rangeitems>.rightitem{
+    -webkit-box-flex: 1;
+    text-align: right;
+}
+.alarmanalytooltips{
+    position: absolute;background-color: #FFFFFF;height: 25px;line-height: 25px;padding-left: 5px;padding-right: 5px;
+}
+/*页面美化样式修改-------------------------start*/
+.headtitle{
+    height: 30px;
+    line-height: 30px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ededed));
+    display: -webkit-box;
+}
+.headtitle_img{
+    width: 15px;
+    height: 17px;
+    background-image: url('../images/ico.gif');
+    margin-top: 6px;
+    margin-left: 10px;
+}
+.headtitle_txt{
+    font-weight: bold;padding-right: 10px;border-bottom: solid 3px #3398de;margin-left: 10px;
+}
+.content_right>div[class='rightheadtitle']{
+    padding-left: 0px;
+    padding-left: 0px;
+    height: 30px;
+    line-height: 30px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ededed));
+    display: -webkit-box;
+    margin-bottom: 25px;
+}
+.legendpanel{
+    display: -webkit-box;
+    padding: 30px;
+    padding-top: 20px;
+}
+.legendpanel>.legenditem{
+    -webkit-box-flex: 1;max-width: 100px;display: -webkit-box;
+}
+.legendpanel>.legenditem>.coloread{
+    width: 15px;height: 15px;
+}
+
+/* start pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/
+body.disable-default-action
+{
+    -webkit-touch-callout:none ;
+    -webkit-user-select:none ;
+}
+
+*:not(input,textarea) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+/* end pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/

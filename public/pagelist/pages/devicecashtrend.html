@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>装置现金流趋势分析</title>
+    <link href="../css/htmlmodel.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        body,div,label,span,li{
+            font-family: "微软雅黑","宋体","Arial";
+            font-size: 12px;
+        }
+        .maindiv{
+            width: 100%;height: 100%;margin: auto 0px;padding: 0px;display: -webkit-box;-webkit-box-orient:vertical;
+        }
+        .toppanel{
+            height: 350px;margin: 10px;margin-bottom: 0px;display: -webkit-box;
+        }
+        .leftpanel{
+            -webkit-box-flex: 1;height: 100%;display: -webkit-box;
+            border: dotted 1px #dcdcdc;
+            border-right-width: 0px;
+        }
+        .leftpanelcontent{
+            margin: 15px; -webkit-box-flex: 1;
+        }
+        .rightpanel{
+            width: 400px;height: 100%;
+            padding-top: 20px;
+            border: dotted 1px #dcdcdc;
+            border-left-width: 0px;
+        }
+        .bottom{
+            -webkit-box-flex: 1;background-color: #FFFFFF;margin:10px ;
+            border: dotted 1px #dcdcdc;
+        }
+        /*右侧环比KPI面板样式*/
+        .rowpanel{
+            background-color: #FFFFFF;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            border: solid 1px #2cb57d;
+        }
+        .textpanel{
+            width: 100%;
+            display: -webkit-box;
+            height: 32px;
+        }
+        .Barpanel{
+            width: 100%;
+            display: -webkit-box;
+            height: 20px;
+        }
+        .centerpanelbar{
+            width: 5px;
+            height: 20px;
+            background-color: #eed718;
+            position: absolute;
+        }
+        .centertext{
+            position: absolute;
+            border-left: solid 2px #eed718;
+            color: #eed718;
+        }
+        .rightpanelbar{
+            height: 20px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="maindiv">
+    <div class="toppanel">
+        <div class="leftpanel">
+            <div id="cloudchart" class="leftpanelcontent"></div>
+        </div>
+        <div id="cashkpi" class="rightpanel">
+        </div>
+    </div>
+    <div id="monthchart" class="bottom">
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript" src="../lib/d3.layout.cloud.js"></script>
+<script type="text/javascript" src="../lib/d3.csv.js"></script>
+<script type="text/javascript" src="../lib/highcharts.js"></script>
+
+<script type="text/javascript" src="../js/devicecash_trend.js"></script>

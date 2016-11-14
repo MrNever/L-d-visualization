@@ -1,0 +1,99 @@
+#box{
+    min-width: 700px;
+    max-width: 980px;
+    margin: 0px auto;
+    padding: 0px;
+}
+#contentright{
+    float: left;
+    height: 200px;
+    margin-left: 900px;
+    margin-top: 60px;
+}
+#contentleft{
+    margin-left: 10px;;
+    position: absolute;
+    top: 23px;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+.node {
+    border: dotted 1px #dcdcdc;
+    font: 12px "微软雅黑";
+    line-height: 12px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 2px;
+    color: #ffffff;
+}
+/*treemap 样式 start --------------------------------------*/
+.node {
+    border: dotted 1px #dcdcdc;
+    font: 12px "微软雅黑";
+    line-height: 12px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 2px;
+    color: #ffffff;
+}
+/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+.numberrangetick{
+    width: 2px;
+    height: 20px;
+    background-color: #fdfa0d;
+    display: none;
+}
+.rangenumberlabel>.left{
+    min-width: 30px;
+}
+.rangenumberlabel>.center{
+    -webkit-box-flex:1;
+    text-align: center;
+    color: #feab3a;
+
+}
+.rangenumberlabel>.right{
+    min-width: 30px;
+
+}
+
+#contentleft div{
+    float: left;
+}
+#contentleft_mo1{
+    position: relative;
+    top:24px;;
+}
+#label_1{
+    position: relative;
+    left: -220px;
+}
+#label_2{
+    position: relative;
+    left: 60px;
+}
+#label_3{
+    position: relative;
+    top: 320px;
+    left: -60px;
+}
+#radindex2 label{
+    position: absolute;
+}
+#radindex2 p{
+    margin-left: 55px;
+    padding: 3px;
+}

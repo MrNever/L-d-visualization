@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>风险注册库关键热词云图</title>
+    <link href="../css/htmlmodel.css" rel="stylesheet" type="text/css"/>
+    <link href="../lib/datepicker/zebra_datepicker_metallic.css" type="text/css" rel="stylesheet"/>
+    <style type="text/css" rel="stylesheet">
+        .maindiv{margin:0px auto;padding: 0px;height: 100%;max-width: 1000px;display: -webkit-box;-webkit-box-orient:vertical;}
+        .riskmenu{height: 30px;display: -webkit-box;margin: 10px}
+        .riskmenu_title{font-size: 14px;line-height: 30px;}
+        .riskmenu_tab{display: -webkit-box;line-height: 30px;margin-right: 40px;}
+        .riskmenu_tab_item{background-color: #dcdcdc;margin-left: 5px;line-height: 30px;padding-left: 5px;padding-right: 5px;cursor: pointer}
+        .riskmenu_tab_selected{background-color: #666666;color: #FFFFFF}
+        .riskmenu_titledate{margin-left: 10px;font-size: 14px;line-height: 30px;}
+        .riskmenu_date{margin-left: 10px;}
+        .DatePicker{height: 25px;color: #666666;width: 120px;}
+        .riskcontent{width: 100%;height: 300px;display: -webkit-box;}
+        .riskleft{width: 600px;display: -webkit-box;border: dotted 1px #dcdcdc;}
+        .riskleftcontent{margin: 15px;-webkit-box-flex: 1}
+        .riskright{-webkit-box-flex: 1;border: dotted 1px #dcdcdc;}
+        .riskbottom{width: 100%;-webkit-box-flex: 1;border: dotted 1px #dcdcdc;}
+    </style>
+</head>
+<body>
+<div class="maindiv">
+    <div class="riskmenu">
+        <div class="riskmenu_title">云图切换：</div>
+        <div class="riskmenu_tab">
+            <div data-namekey="pepoword" data-valuekey="peponum" class="riskmenu_tab_item riskmenu_tab_selected">人员安全热词</div>
+            <div data-namekey="deviceword" data-valuekey="devicenum" class="riskmenu_tab_item">设备风险热词</div>
+            <div data-namekey="technologyword" data-valuekey="technologynum" class="riskmenu_tab_item">工艺风险热词</div>
+        </div>
+        <div class="riskmenu_titledate">时间范围：</div>
+        <div class="riskmenu_date"><input  id="datepicker01" type='text' class='DatePicker'></div>
+        <div class="riskmenu_titledate">截止：</div>
+        <div class="riskmenu_date"><input  id="datepicker02" type='text' class='DatePicker'></div>
+    </div>
+    <div class="riskcontent">
+        <div class="riskleft">
+            <div id="riskcloudword" class="riskleftcontent"></div>
+        </div>
+        <div id="riskwordchart" class="riskright"></div>
+    </div>
+    <div id="riskhistorychart" class="riskbottom"></div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/datepicker/zebra_datepicker.src.js"></script>
+<script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript" src="../lib/d3.layout.cloud.js"></script>
+<script type="text/javascript" src="../lib/d3.csv.js"></script>
+<script type="text/javascript" src="../lib/highcharts.js"></script>
+
+<script type="text/javascript" src="../js/risklibrary_cloud.js"></script>

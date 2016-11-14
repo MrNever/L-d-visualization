@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>过程安全管理评估指标的多维度分析</title>
+    <link href="../css/multidimensionalpsm.css" rel="stylesheet" type="text/css" />
+    <link href="../lib/icheck/blue.css" rel="stylesheet" type="text/css" />
+    <script src="../lib/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="../lib/icheck/icheck.js" type="text/javascript"></script>
+    <script src="../lib/highcharts.js" type="text/javascript"></script>
+    <script src="../lib/highcharts-more.js" type="text/javascript"></script>
+    <script src="../js/multidimensionalpsm.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //MDS();
+            //GetdataTotable();
+            //AddTitleCheckbox(0, 0, "#000000", "你好");
+        });
+    </script>
+</head>
+<body>
+    <!--head  button-->
+    <div class="divTitle">过程安全管理评估指标的多维度分析</div>
+    <div class="divContent">
+        <input  class="btn" id="Button1" type="button" value="装置" />
+        <input  class="btn" id="Button2" type="button" value="老区裂解" />
+        <input  class="btn" id="Button3" type="button" value="新区裂解" />
+        <input  class="btn" id="Button4" type="button" value="分区单元" />
+    </div>
+
+    <!--left body-->
+    <div class="divleft">
+        
+        <div class="divMS">
+            <label class="labtitle labcentertitle">多维度分析</label>
+        </div>
+        <div class="divcharttitle divPL">Character Types</div>
+        <div class="divcharts">
+            <div class="divabsoluteU">
+                <label class="labtitle labLDtitle divtitleUL">安全意识与能力</label>
+                <label class="labtitle labLDtitle divtitleUR">事故事件与应急</label>
+            </div>
+            
+            <div class="divabsoluteD">
+                <label class="labtitle labcentertitle divtitleUL">风险识别</label>
+                <label class="labtitle labLDtitle divtitleUR">过程安全控制</label>
+            </div>
+            <div class="divchart" id="MDS"></div>
+        </div>
+        <div class="divContent divPL">
+            <label class="labtitle labLDtitle">指标计算分值</label>
+        </div>
+        <div class="divtable">
+            <table id="mytb"></table>
+        </div>
+    </div>
+
+    <!--right body-->
+    <div class="divright">
+        <div class="divRUtitle">
+            <label class="labtitle labRtitle">评估等级</label>
+        </div>
+        <div class="divlenglist" id="lenglist"></div>
+        <div class="divRDtitle">
+            <label class="labtitle labRtitle">评估指标</label>
+        </div>
+        <div class="divchecklist">
+            <span id="sclist"></span>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript" src="../lib/d3.csv.js"></script>

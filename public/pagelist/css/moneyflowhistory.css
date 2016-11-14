@@ -1,0 +1,81 @@
+/*.main_box{*/
+/*max-width: 1000px;*/
+/*margin: 0px auto;*/
+/*height: 100%;*/
+/*display:-webkit-box;*/
+/*}*/
+/*.top{*/
+/*-webkit-box-flex: 1;*/
+/*display: -webkit-box;;*/
+/*}*/
+/*.top_left{*/
+/*-webkit-box-flex: 1;*/
+/*height: 30px;*/
+/*border: 1px dashed #00ee00;*/
+/*background:#fdb933*/
+/*}*/
+/*.top_right{*/
+/*-webkit-box-flex: 1;*/
+/*height: 30px;*/
+/*border: 1px dashed #00ee00;*/
+/*background:#ed1941*/
+/*margin-left: 850px*/
+/*}*/
+/*.button{*/
+/*-webkit-box-flex: 1;*/
+/*display: -webkit-box;*/
+/*padding-top: 20px;*/
+/*}*/
+/*#myGrid{*/
+/*}*/
+/*.top_left_input1{*/
+
+/*}*/
+.main_box{
+    max-width: 1000px;
+    margin: 0px auto;
+    height: 100%;
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+
+}
+.top_left{
+    -webkit-box-flex: 1;
+    height: 30px;
+    display: flex;
+
+}
+.top_right{
+    -webkit-box-flex: 1;
+    height: 30px;
+    display: flex;
+    margin-left: 500px;
+
+}
+.top{
+    margin: 10px;
+    display: -webkit-box;
+
+}
+/*.top_left_input1{*/
+/*-webkit-box-flex: 1;*/
+/*display: flex;*/
+/*border: 1px dashed #00ee00;*/
+/*}*/
+.button_grid{
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+
+}
+/* start pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/
+body.disable-default-action
+{
+    -webkit-touch-callout:none ;
+    -webkit-user-select:none ;
+}
+
+*:not(input,textarea) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+/* end pad禁用整个页面的用户选择和链接弹出框 只允许Form表单域执行文本的剪切板操作*/

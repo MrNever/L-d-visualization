@@ -1,0 +1,8 @@
+﻿[
+{"Name":"Sacha","Ratio":1.41,"Popularity":2.12,"Matches":50.542,"KDA":3.18,"Kills":1.52,"Deaths":3.77,"Assists":10.86},
+{"Name":"Joen","Ratio":1.40,"Popularity":2.07,"Matches":50.542,"KDA":3.18,"Kills":1.52,"Deaths":3.77,"Assists":10.86},
+{"Name":"Hoet","Ratio":1.39,"Popularity":1.89,"Matches":50.542,"KDA":3.18,"Kills":1.52,"Deaths":3.77,"Assists":10.86},
+{"Name":"Turden","Ratio":1.29,"Popularity":1.84,"Matches":50.542,"KDA":3.18,"Kills":1.52,"Deaths":3.77,"Assists":10.86},
+{"Name":"Angok","Ratio":1.39,"Popularity":1.89,"Matches":50.542,"KDA":3.18,"Kills":1.52,"Deaths":3.77,"Assists":10.86},
+{"Name":"Atril","Ratio":1.29,"Popularity":1.84,"Matches":50.542,"KDA":3.18,"Kills":1.52,"Deaths":3.77,"Assists":10.86}
+]

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>现金流历史趋势分析</title>
+    <link href="../css/htmlmodel.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/cashoverview.css" type="text/css" rel="stylesheet"/>
+    <link href="../lib/datepicker/zebra_datepicker_metallic.css" type="text/css" rel="stylesheet"/>
+</head>
+<body onselectstart="return false">
+<div class="main">
+    <div id="content_3" class="content">
+        <div class="content_left"></div>
+        <div class="content_right">
+            <div>装置选择：</div>
+            <div  class="devicelist">
+                <div><div><input type="checkbox" class="checkboxitem" checked="checked" value="正现金流装置"></div><div>正现金流装置</div></div>
+                <div><div><input type="checkbox" class="checkboxitem" checked="checked" value="负现金流装置"></div><div>负现金流装置</div></div>
+            </div>
+            <div>现金流类型：</div>
+            <div class="radiobutton">
+                <div><div><input type="radio" class="radioitem" name="radiomo3" checked value="日现金流"></div><div>日现金流</div></div>
+                <div><div><input type="radio" class="radioitem" name="radiomo3" value="累计现金流"></div><div>累计现金流</div></div>
+                <div><div><input type="radio" class="radioitem" name="radiomo3" value="预计现金流"></div><div>预计现金流</div></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+<script type="text/javascript" src="../lib/d3.csv.js"></script>
+<script type="text/javascript" src="../lib/hammer.js"></script>
+<script type="text/javascript" src="../lib/datepicker/zebra_datepicker.src.js"></script>
+<script type="text/javascript" src="../js/cashtrend.js"></script>
